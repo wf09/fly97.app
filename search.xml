@@ -282,14 +282,14 @@
 <p>可以通过重置应用来切换系统！</p>
 <h3 id="IO测试"><a href="#IO测试" class="headerlink" title="IO测试"></a>IO测试</h3><p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706212710077.png" alt="image-20200706212710077"></p>
 <p>IO速度比较快！</p>
-<h3 id="网络测试"><a href="#网络测试" class="headerlink" title="网络测试"></a>网络测试</h3><p>使用<code>bash &lt;(curl -Lso- https://git.io/superspeed)</code>进行全面测速。</p>
+<h3 id="网络测试"><a href="#网络测试" class="headerlink" title="网络测试"></a>网络测试</h3><p>使用<code>bash &lt;(curl -Lso- https://cdn.jsdelivr.net/gh/wf09/superspeed/superspeed.sh)</code>进行全面测速。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706233855456.png" alt="image-20200706233855456">国内一般说来线路都不错。</p>
-<h3 id="去程回程"><a href="#去程回程" class="headerlink" title="去程回程"></a>去程回程</h3><p>联通去程</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706213559142.png" alt="image-20200706213559142"></p>
-<p>联通回程</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@VM-8-9-ubuntu:~<span class="comment"># ./besttrace 101.71.244.89</span></span><br><span class="line">traceroute to 101.71.244.89 (101.71.244.89), 30 hops max, 60 byte packets</span><br><span class="line"> 1  9.31.63.129  0.81 ms  *  美国 ibm.com</span><br><span class="line">    9.31.63.129  10.89 ms  *  美国 ibm.com</span><br><span class="line">    9.31.63.129  0.75 ms  *  美国 ibm.com</span><br><span class="line"> 2  9.31.123.8  0.85 ms  *  美国 ibm.com</span><br><span class="line">    9.31.123.8  0.79 ms  *  美国 ibm.com</span><br><span class="line">    9.31.123.8  0.76 ms  *  美国 ibm.com</span><br><span class="line"> 3  10.196.18.61  0.87 ms  *  局域网</span><br><span class="line">    10.196.18.61  0.60 ms  *  局域网</span><br><span class="line">    10.196.18.61  0.86 ms  *  局域网</span><br><span class="line"> 4  10.162.33.5  1.69 ms  *  局域网</span><br><span class="line">    10.162.33.5  2.01 ms  *  局域网</span><br><span class="line">    10.162.33.5  1.48 ms  *  局域网</span><br><span class="line"> 5  10.162.32.149  1.30 ms  *  局域网</span><br><span class="line">    10.162.32.149  1.21 ms  *  局域网</span><br><span class="line">    10.162.32.149  1.44 ms  *  局域网</span><br><span class="line"> 6  58.254.152.109  1.67 ms  AS136958  中国 广东 广州 联通</span><br><span class="line">    58.254.152.109  1.65 ms  AS136958  中国 广东 广州 联通</span><br><span class="line">    58.254.152.109  1.67 ms  AS136958  中国 广东 广州 联通</span><br><span class="line"> 7  120.80.137.21  682.78 ms  AS17816  中国 广东 广州 联通</span><br><span class="line">    120.80.137.21  532.51 ms  AS17816  中国 广东 广州 联通</span><br><span class="line">    120.80.137.21  284.47 ms  AS17816  中国 广东 广州 联通</span><br><span class="line"> 8  *</span><br><span class="line">    *</span><br><span class="line">    *</span><br><span class="line"> 9  101.71.244.89  25.06 ms  AS4837  中国 浙江 杭州 联通</span><br><span class="line">    101.71.244.89  30.87 ms  AS4837  中国 浙江 杭州 联通</span><br><span class="line">    101.71.244.89  28.66 ms  AS4837  中国 浙江 杭州 联通</span><br></pre></td></tr></table></figure>
+<h3 id="网络丢包"><a href="#网络丢包" class="headerlink" title="网络丢包"></a>网络丢包</h3><p>测试时间晚上9点左右，国内表现较好。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707205959840.png" alt=""></p>
+<h3 id="内存测试"><a href="#内存测试" class="headerlink" title="内存测试"></a>内存测试</h3><p>使用以下命令进行内存测试：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install wget build-essential -y</span><br><span class="line">wget https://cdn.jsdelivr.net/gh/FunctionClub/Memtester/master/memtester.cpp</span><br><span class="line">gcc -l stdc++ memtester.cpp</span><br><span class="line">./a.out</span><br></pre></td></tr></table></figure>
 
-<h3 id="内存测试"><a href="#内存测试" class="headerlink" title="内存测试"></a>内存测试</h3><p>最大能分配到1660MB</p>
+<p>最大能分配到1660MB</p>
 <p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706215402112.png" alt=""></p>
 <h3 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h3><p>执行以下命令：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://ftp.fly97.cn/linux/UnixBench5.1.3.tgz</span><br><span class="line">tar -zxvf UnixBench5.1.3.tgz</span><br><span class="line">cd UnixBench</span><br><span class="line">make</span><br><span class="line">./Run</span><br></pre></td></tr></table></figure>
@@ -395,7 +395,10 @@
 <p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707194243222.png" alt=""></p>
 <h3 id="网络丢包"><a href="#网络丢包" class="headerlink" title="网络丢包"></a>网络丢包</h3><p>测试时间晚上7点左右，国内表现较好。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707194636198.png" alt=""></p>
-<h3 id="内存测试"><a href="#内存测试" class="headerlink" title="内存测试"></a>内存测试</h3><p>最大能分配到1670MB</p>
+<h3 id="内存测试"><a href="#内存测试" class="headerlink" title="内存测试"></a>内存测试</h3><p>使用以下命令进行内存测试：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install wget build-essential -y</span><br><span class="line">wget https://cdn.jsdelivr.net/gh/FunctionClub/Memtester/master/memtester.cpp</span><br><span class="line">gcc -l stdc++ memtester.cpp</span><br><span class="line">./a.out</span><br></pre></td></tr></table></figure>
+
+<p>最大能分配到1670MB</p>
 <p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707195146027.png" alt=""></p>
 <h3 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h3><p>执行以下命令：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://ftp.fly97.cn/linux/UnixBench5.1.3.tgz</span><br><span class="line">tar -zxvf UnixBench5.1.3.tgz</span><br><span class="line">cd UnixBench</span><br><span class="line">make</span><br><span class="line">./Run</span><br></pre></td></tr></table></figure>
