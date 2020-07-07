@@ -290,18 +290,18 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@VM-8-9-ubuntu:~<span class="comment"># ./besttrace 101.71.244.89</span></span><br><span class="line">traceroute to 101.71.244.89 (101.71.244.89), 30 hops max, 60 byte packets</span><br><span class="line"> 1  9.31.63.129  0.81 ms  *  美国 ibm.com</span><br><span class="line">    9.31.63.129  10.89 ms  *  美国 ibm.com</span><br><span class="line">    9.31.63.129  0.75 ms  *  美国 ibm.com</span><br><span class="line"> 2  9.31.123.8  0.85 ms  *  美国 ibm.com</span><br><span class="line">    9.31.123.8  0.79 ms  *  美国 ibm.com</span><br><span class="line">    9.31.123.8  0.76 ms  *  美国 ibm.com</span><br><span class="line"> 3  10.196.18.61  0.87 ms  *  局域网</span><br><span class="line">    10.196.18.61  0.60 ms  *  局域网</span><br><span class="line">    10.196.18.61  0.86 ms  *  局域网</span><br><span class="line"> 4  10.162.33.5  1.69 ms  *  局域网</span><br><span class="line">    10.162.33.5  2.01 ms  *  局域网</span><br><span class="line">    10.162.33.5  1.48 ms  *  局域网</span><br><span class="line"> 5  10.162.32.149  1.30 ms  *  局域网</span><br><span class="line">    10.162.32.149  1.21 ms  *  局域网</span><br><span class="line">    10.162.32.149  1.44 ms  *  局域网</span><br><span class="line"> 6  58.254.152.109  1.67 ms  AS136958  中国 广东 广州 联通</span><br><span class="line">    58.254.152.109  1.65 ms  AS136958  中国 广东 广州 联通</span><br><span class="line">    58.254.152.109  1.67 ms  AS136958  中国 广东 广州 联通</span><br><span class="line"> 7  120.80.137.21  682.78 ms  AS17816  中国 广东 广州 联通</span><br><span class="line">    120.80.137.21  532.51 ms  AS17816  中国 广东 广州 联通</span><br><span class="line">    120.80.137.21  284.47 ms  AS17816  中国 广东 广州 联通</span><br><span class="line"> 8  *</span><br><span class="line">    *</span><br><span class="line">    *</span><br><span class="line"> 9  101.71.244.89  25.06 ms  AS4837  中国 浙江 杭州 联通</span><br><span class="line">    101.71.244.89  30.87 ms  AS4837  中国 浙江 杭州 联通</span><br><span class="line">    101.71.244.89  28.66 ms  AS4837  中国 浙江 杭州 联通</span><br></pre></td></tr></table></figure>
 
 <h3 id="内存测试"><a href="#内存测试" class="headerlink" title="内存测试"></a>内存测试</h3><p>最大能分配到1660MB</p>
-<p><img src="C:%5CUsers%5Cwf09%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200706215402112.png" alt="image-20200706215402112"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706215402112.png" alt=""></p>
 <h3 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h3><p>执行以下命令：</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://ftp.fly97.cn/linux/UnixBench5.1.3.tgz</span><br><span class="line">tar -zxvf UnixBench5.1.3.tgz</span><br><span class="line">cd UnixBench</span><br><span class="line">make</span><br><span class="line">./Run</span><br></pre></td></tr></table></figure>
 
-<p>测试结果：</p>
+<p>测试结果： 1879.8</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">========================================================================</span><br><span class="line">   BYTE UNIX Benchmarks (Version 5.1.3)</span><br><span class="line"></span><br><span class="line">   System: VM-8-9-ubuntu: GNU/Linux</span><br><span class="line">   OS: GNU/Linux -- 4.15.0-88-generic -- #88-Ubuntu SMP Tue Feb 11 20:11:34 UTC 2020</span><br><span class="line">   Machine: x86_64 (x86_64)</span><br><span class="line">   Language: en_US.utf8 (charmap="UTF-8", collate="UTF-8")</span><br><span class="line">   CPU 0: AMD EPYC 7K62 48-Core Processor (5190.2 bogomips)</span><br><span class="line">          x86-64, MMX, AMD MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET</span><br><span class="line">   22:01:26 up 5 min,  1 user,  load average: 0.11, 0.22, 0.11; runlevel 5</span><br><span class="line"></span><br><span class="line">------------------------------------------------------------------------</span><br><span class="line">Benchmark Run: Mon Jul 06 2020 22:01:26 - 22:31:06</span><br><span class="line">1 CPU in system; running 1 parallel copy of tests</span><br><span class="line"></span><br><span class="line">Dhrystone 2 using register variables       39868669.2 lps   (10.0 s, 7 samples)</span><br><span class="line">Double-Precision Whetstone                     3161.5 MWIPS (20.0 s, 7 samples)</span><br><span class="line">Execl Throughput                               5599.4 lps   (30.0 s, 2 samples)</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks       1199684.7 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 256 bufsize 500 maxblocks          323022.4 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks       3465015.1 KBps  (30.0 s, 2 samples)</span><br><span class="line">Pipe Throughput                             1942962.2 lps   (10.0 s, 7 samples)</span><br><span class="line">Pipe-based Context Switching                 294012.1 lps   (10.0 s, 7 samples)</span><br><span class="line">Process Creation                              20476.3 lps   (30.0 s, 2 samples)</span><br><span class="line">Shell Scripts (1 concurrent)                  11446.9 lpm   (60.0 s, 2 samples)</span><br><span class="line">Shell Scripts (8 concurrent)                   1507.0 lpm   (60.0 s, 2 samples)</span><br><span class="line">System Call Overhead                        2554990.5 lps   (10.0 s, 7 samples)</span><br><span class="line"></span><br><span class="line">System Benchmarks Index Values               BASELINE       RESULT    INDEX</span><br><span class="line">Dhrystone 2 using register variables         116700.0   39868669.2   3416.3</span><br><span class="line">Double-Precision Whetstone                       55.0       3161.5    574.8</span><br><span class="line">Execl Throughput                                 43.0       5599.4   1302.2</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks          3960.0    1199684.7   3029.5</span><br><span class="line">File Copy 256 bufsize 500 maxblocks            1655.0     323022.4   1951.8</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks          5800.0    3465015.1   5974.2</span><br><span class="line">Pipe Throughput                               12440.0    1942962.2   1561.9</span><br><span class="line">Pipe-based Context Switching                   4000.0     294012.1    735.0</span><br><span class="line">Process Creation                                126.0      20476.3   1625.1</span><br><span class="line">Shell Scripts (1 concurrent)                     42.4      11446.9   2699.7</span><br><span class="line">Shell Scripts (8 concurrent)                      6.0       1507.0   2511.6</span><br><span class="line">System Call Overhead                          15000.0    2554990.5   1703.3</span><br><span class="line">                                                                   ========</span><br><span class="line">System Benchmarks Index Score                                        1879.8</span><br></pre></td></tr></table></figure>
 
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>服务器性能：AMD的U，运算能力还是满强的的，磁盘IO也很棒</p>
 <p>网络情况：国内访问延迟较低，国外访问丢包。</p>
 <p><strong>价格情况：价格不算便宜，不过现在可以免费体验。</strong></p>
 <p>计费方式：按月/年计费。</p>
-<p>支付方式：支付宝，微信，银行卡。</p>
+<p>支付方式：微信，银行卡。</p>
 <p>能否建站： 可以，国外访问较差。</p>
 <p>工单服务：回复比较及时。</p>
 <p>商家口碑：口碑不错。</p>
@@ -311,6 +311,7 @@
       <tags>
         <tag>VPS</tag>
         <tag>腾讯云</tag>
+        <tag>Lighthouse</tag>
       </tags>
   </entry>
   <entry>
@@ -363,6 +364,60 @@
       <tags>
         <tag>VPS</tag>
         <tag>阿里云</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>腾讯云服务器测评：1CPU/2G内存/1M带宽国内云服务器</title>
+    <url>/2020/07/06/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%9B%BD%E5%86%85%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84/</url>
+    <content><![CDATA[<p>​    腾讯云是大家熟知的云服务品牌，也叫良心云。</p>
+<a id="more"></a>
+
+<p>​    此次介绍的是<code>云服务器CVM</code>。这个是2019年底参加活动时购入，本来想拿来做中转的，可是开通以后带宽只有1M，顿时傻了眼。因为是活动机型所以不能退款！只能拿来吃灰！借此机会提醒一下大家：参加活动时务必要看好说明！切记！切记。</p>
+<h3 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h3><p><a href="https://console.cloud.tencent.com/cvm/instance" target="_blank" rel="noopener">https://console.cloud.tencent.com/cvm/instance</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707192909670.png" alt=""></p>
+<h3 id="主机配置"><a href="#主机配置" class="headerlink" title="主机配置"></a>主机配置</h3><p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707193428121.png" alt=""></p>
+<p>其他配置：</p>
+<p>带宽：1Mbps（峰值）</p>
+<p>流量：无限</p>
+<p>数据中心：见下图</p>
+<p><strong>续费</strong>价格：<em>125</em> 元/月</p>
+<p>支持的系统镜像：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707193618708.png" alt=""></p>
+<p>支持的应用镜像：<img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707193654071.png" alt=""></p>
+<p>可以通过重置应用来切换系统！</p>
+<p>数据中心：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707193718143.png" alt=""></p>
+<h3 id="IO测试"><a href="#IO测试" class="headerlink" title="IO测试"></a>IO测试</h3><p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707193732518.png" alt=""></p>
+<p>IO稍稍比轻量差！</p>
+<h3 id="网络速度"><a href="#网络速度" class="headerlink" title="网络速度"></a>网络速度</h3><p>使用<code>bash &lt;(curl -Lso- https://cdn.jsdelivr.net/gh/wf09/superbench/superbench.sh)</code>进行全面测速。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707194008487.png" alt="">国内一般说来线路都不错，参考意义不大。</p>
+<h3 id="网络延迟"><a href="#网络延迟" class="headerlink" title="网络延迟"></a>网络延迟</h3><p>国内延迟不错，国外也可以。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707194243222.png" alt=""></p>
+<h3 id="网络丢包"><a href="#网络丢包" class="headerlink" title="网络丢包"></a>网络丢包</h3><p>测试时间晚上7点左右，国内表现较好。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707194636198.png" alt=""></p>
+<h3 id="内存测试"><a href="#内存测试" class="headerlink" title="内存测试"></a>内存测试</h3><p>最大能分配到1670MB</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707195146027.png" alt=""></p>
+<h3 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h3><p>执行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://ftp.fly97.cn/linux/UnixBench5.1.3.tgz</span><br><span class="line">tar -zxvf UnixBench5.1.3.tgz</span><br><span class="line">cd UnixBench</span><br><span class="line">make</span><br><span class="line">./Run</span><br></pre></td></tr></table></figure>
+
+<p>测试结果：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">========================================================================</span><br><span class="line">   BYTE UNIX Benchmarks (Version 5.1.3)</span><br><span class="line"></span><br><span class="line">   System: tencent-shanghai: GNU/Linux</span><br><span class="line">   OS: GNU/Linux -- 4.15.0-54-generic -- #58-Ubuntu SMP Mon Jun 24 10:55:24 UTC 2019</span><br><span class="line">   Machine: x86_64 (x86_64)</span><br><span class="line">   Language: en_US.utf8 (charmap="UTF-8", collate="UTF-8")</span><br><span class="line">   CPU 0: Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz (4788.7 bogomips)</span><br><span class="line">          x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET</span><br><span class="line">   19:52:05 up 30 min,  1 user,  load average: 0.27, 0.10, 0.05; runlevel 5</span><br><span class="line"></span><br><span class="line">------------------------------------------------------------------------</span><br><span class="line">Benchmark Run: Tue Jul 07 2020 19:52:06 - 20:20:35</span><br><span class="line">1 CPU in system; running 1 parallel copy of tests</span><br><span class="line"></span><br><span class="line">Dhrystone 2 using register variables       37136682.3 lps   (10.0 s, 7 samples)</span><br><span class="line">Double-Precision Whetstone                     4128.3 MWIPS (12.4 s, 7 samples)</span><br><span class="line">Execl Throughput                               4635.9 lps   (30.0 s, 2 samples)</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks        550523.4 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 256 bufsize 500 maxblocks          158636.0 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks       1484270.9 KBps  (30.0 s, 2 samples)</span><br><span class="line">Pipe Throughput                              821034.2 lps   (10.0 s, 7 samples)</span><br><span class="line">Pipe-based Context Switching                 213682.3 lps   (10.0 s, 7 samples)</span><br><span class="line">Process Creation                              12280.7 lps   (30.0 s, 2 samples)</span><br><span class="line">Shell Scripts (1 concurrent)                   8637.9 lpm   (60.0 s, 2 samples)</span><br><span class="line">Shell Scripts (8 concurrent)                   1112.0 lpm   (60.0 s, 2 samples)</span><br><span class="line">System Call Overhead                         497550.9 lps   (10.0 s, 7 samples)</span><br><span class="line"></span><br><span class="line">System Benchmarks Index Values               BASELINE       RESULT    INDEX</span><br><span class="line">Dhrystone 2 using register variables         116700.0   37136682.3   3182.2</span><br><span class="line">Double-Precision Whetstone                       55.0       4128.3    750.6</span><br><span class="line">Execl Throughput                                 43.0       4635.9   1078.1</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks          3960.0     550523.4   1390.2</span><br><span class="line">File Copy 256 bufsize 500 maxblocks            1655.0     158636.0    958.5</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks          5800.0    1484270.9   2559.1</span><br><span class="line">Pipe Throughput                               12440.0     821034.2    660.0</span><br><span class="line">Pipe-based Context Switching                   4000.0     213682.3    534.2</span><br><span class="line">Process Creation                                126.0      12280.7    974.7</span><br><span class="line">Shell Scripts (1 concurrent)                     42.4       8637.9   2037.2</span><br><span class="line">Shell Scripts (8 concurrent)                      6.0       1112.0   1853.4</span><br><span class="line">System Call Overhead                          15000.0     497550.9    331.7</span><br><span class="line">                                                                   ========</span><br><span class="line">System Benchmarks Index Score                                        1117.2</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>服务器性能：Intel的U，运算能力竟然比不上amd，磁盘IO也不错</p>
+<p>网络情况：国内访问延迟较低，国外访问丢包。<strong>带宽较小</strong>，只适合搭建博客等个人站点。</p>
+<p><strong>价格情况：价格不便宜，建议活动的时候入！性价比轻量略低！</strong></p>
+<p>计费方式：按月/年计费。</p>
+<p>支付方式：微信，银行卡。</p>
+<p>能否建站： 可以，国外访问较差。</p>
+<p>工单服务：回复比较及时。</p>
+<p>商家口碑：口碑不错。</p>
+<p><strong>能否退货：活动机型不支持五天无理由退款。切记！！</strong></p>
+<p>完。</p>
+]]></content>
+      <tags>
+        <tag>VPS</tag>
+        <tag>腾讯云</tag>
+        <tag>CVM</tag>
       </tags>
   </entry>
 </search>
