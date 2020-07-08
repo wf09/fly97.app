@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://wf09.github.io').hostname,
+    root: '/',
+    scheme: 'Mist',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"hide","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="​    金山云创立于2012年，是中国前三的互联网云服务商，2020年5月在美国纳斯达克上市（股票代码：KC），业务范围遍及全球多个国家和地区。成立8年来，金山云始终坚持以客户为中心的服务理念，提供安全、可靠、稳定、高品质的云计算服务。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="金山云服务器测评：1CPU&#x2F;2G内存&#x2F;5M带宽国内轻量应用云服务器">
+<meta property="og:url" content="http://wf09.github.io/2020/07/08/%E9%87%91%E5%B1%B1%E4%BA%91%E5%9B%BD%E5%86%85%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84/index.html">
+<meta property="og:site_name" content="fly97&#39;s blogs">
+<meta property="og:description" content="​    金山云创立于2012年，是中国前三的互联网云服务商，2020年5月在美国纳斯达克上市（股票代码：KC），业务范围遍及全球多个国家和地区。成立8年来，金山云始终坚持以客户为中心的服务理念，提供安全、可靠、稳定、高品质的云计算服务。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708191652276.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708192052498.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708192500858.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708192800736.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708192947754.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708193240582.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708193322805.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708193754329.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708195332125.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708205032115.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708195627952.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708195945433.png">
+<meta property="article:published_time" content="2020-07-08T13:00:00.000Z">
+<meta property="article:modified_time" content="2020-07-08T12:59:39.184Z">
+<meta property="article:author" content="fly97">
+<meta property="article:tag" content="VPS">
+<meta property="article:tag" content="金山云">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708191652276.png">
+
+<link rel="canonical" href="http://wf09.github.io/2020/07/08/%E9%87%91%E5%B1%B1%E4%BA%91%E5%9B%BD%E5%86%85%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>金山云服务器测评：1CPU/2G内存/5M带宽国内轻量应用云服务器 | fly97's blogs</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">fly97's blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section">首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section">标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section">归档</a>
+
+  </li>
+        <li class="menu-item menu-item-referral">
+
+    <a href="/referral/" rel="section">推广</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger">搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/wf09" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wf09.github.io/2020/07/08/%E9%87%91%E5%B1%B1%E4%BA%91%E5%9B%BD%E5%86%85%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="fly97">
+      <meta itemprop="description" content="你不是我 怎么可能做到感同身受">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="fly97's blogs">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          金山云服务器测评：1CPU/2G内存/5M带宽国内轻量应用云服务器
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-08 21:00:00 / 修改时间：20:59:39" itemprop="dateCreated datePublished" datetime="2020-07-08T21:00:00+08:00">2020-07-08</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>​    金山云创立于2012年，是中国前三的互联网云服务商，2020年5月在美国纳斯达克上市（股票代码：KC），业务范围遍及全球多个国家和地区。成立8年来，金山云始终坚持以客户为中心的服务理念，提供安全、可靠、稳定、高品质的云计算服务。</p>
+<a id="more"></a>
+
+<p>​    此次介绍的是<code>云服务器 基础型E1</code>。通过<strong>邀请新用户参团并购买</strong>老用户即可获得购买机会。</p>
+<p>参团链接：<a href="http://ksyun.com/s/cIyKG2" target="_blank" rel="noopener">http://ksyun.com/s/cIyKG2</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708191652276.png" alt="image-20200708191652276"></p>
+<h3 id="如何购买"><a href="#如何购买" class="headerlink" title="如何购买"></a>如何购买</h3><p>打开活动界面，点击注册账户。输入个人信息完成注册。微信扫码通过<strong>身份证号+人脸识别</strong>完成实名验证。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708192052498.png" alt=""></p>
+<p>实名验证后返回活动界面，点击拼团购买。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708192500858.png" alt=""></p>
+<h3 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h3><p><a href="https://kec.console.ksyun.com/v2/#/kec" target="_blank" rel="noopener">https://kec.console.ksyun.com/v2/#/kec</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708192800736.png" alt=""></p>
+<h3 id="主机配置"><a href="#主机配置" class="headerlink" title="主机配置"></a>主机配置</h3><p>通过运行<code>bash &lt;(curl -Lso- https://cdn.jsdelivr.net/gh/wf09/superbench/superbench.sh)</code>，查看基本的服务器信息。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708192947754.png" alt=""></p>
+<p>其他配置：</p>
+<p>带宽：5Mbps（峰值）</p>
+<p>流量：<strong>无限</strong></p>
+<p>数据中心：北京/广州/上海 </p>
+<p>价格：<em>88</em>一年（续费原价）</p>
+<p>支持的Linux镜像：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708193240582.png" alt=""></p>
+<p>支持的Windows镜像：<img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708193322805.png" alt=""></p>
+<p>可以通过重装系统来切换系统！</p>
+<h3 id="IO测试"><a href="#IO测试" class="headerlink" title="IO测试"></a>IO测试</h3><p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708193754329.png" alt=""></p>
+<p>IO速度<strong>非常快</strong>，就是不太稳定233。</p>
+<h3 id="网络测试"><a href="#网络测试" class="headerlink" title="网络测试"></a>网络测试</h3><p>使用<code>bash &lt;(curl -Lso- https://cdn.jsdelivr.net/gh/wf09/superspeed/superspeed.sh)</code>进行全面测速。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708195332125.png" alt="">国内一般说来线路都不错。</p>
+<p>下载速度测试：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708205032115.png" alt=""></p>
+<h3 id="网络丢包"><a href="#网络丢包" class="headerlink" title="网络丢包"></a>网络丢包</h3><p>测试时间晚上8点左右，国内表现较好。国外稍有丢包！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708195627952.png" alt=""></p>
+<h3 id="内存测试"><a href="#内存测试" class="headerlink" title="内存测试"></a>内存测试</h3><p>使用以下命令进行内存测试：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install wget build-essential -y</span><br><span class="line">wget https://cdn.jsdelivr.net/gh/FunctionClub/Memtester/memtester.cpp</span><br><span class="line">g++ -l stdc++ memtester.cpp</span><br><span class="line">./a.out</span><br></pre></td></tr></table></figure>
+
+<p>最大能分配到1820MB</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708195945433.png" alt=""></p>
+<h3 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h3><p>执行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget https://ftp.fly97.cn/linux/UnixBench5.1.3.tgz</span><br><span class="line">tar -zxvf UnixBench5.1.3.tgz</span><br><span class="line">cd UnixBench</span><br><span class="line">make</span><br><span class="line">./Run</span><br></pre></td></tr></table></figure>
+
+<p>测试结果：  </p>
+<p>仅有606.4！！</p>
+<p>虽然官宣是<strong>Intel Xeon E5</strong>系列处理器。但是性能跑分非常不理想！</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">========================================================================</span><br><span class="line">   BYTE UNIX Benchmarks (Version 5.1.3)</span><br><span class="line"></span><br><span class="line">   System: vm10-0-1-93: GNU/Linux</span><br><span class="line">   OS: GNU/Linux -- 4.15.0-29-generic -- #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018</span><br><span class="line">   Machine: x86_64 (x86_64)</span><br><span class="line">   Language: en_US.utf8 (charmap="UTF-8", collate="UTF-8")</span><br><span class="line">   CPU 0: Ksyun Virtual CPU(ksyun-cpu64) (4988.4 bogomips)</span><br><span class="line">          x86-64, MMX, Physical Address Ext, SYSCALL/SYSRET</span><br><span class="line">   20:02:57 up  1:13,  1 user,  load average: 0.09, 0.09, 0.04; runlevel 5</span><br><span class="line"></span><br><span class="line">------------------------------------------------------------------------</span><br><span class="line">Benchmark Run: Wed Jul 08 2020 20:02:57 - 20:31:05</span><br><span class="line">1 CPU in system; running 1 parallel copy of tests</span><br><span class="line"></span><br><span class="line">Dhrystone 2 using register variables       29235641.6 lps   (10.0 s, 7 samples)</span><br><span class="line">Double-Precision Whetstone                     3832.9 MWIPS (9.9 s, 7 samples)</span><br><span class="line">Execl Throughput                               2769.2 lps   (30.0 s, 2 samples)</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks        228633.4 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 256 bufsize 500 maxblocks           58856.3 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks        814329.1 KBps  (30.0 s, 2 samples)</span><br><span class="line">Pipe Throughput                              293850.7 lps   (10.0 s, 7 samples)</span><br><span class="line">Pipe-based Context Switching                  74232.1 lps   (10.0 s, 7 samples)</span><br><span class="line">Process Creation                               7529.0 lps   (30.0 s, 2 samples)</span><br><span class="line">Shell Scripts (1 concurrent)                   5896.6 lpm   (60.0 s, 2 samples)</span><br><span class="line">Shell Scripts (8 concurrent)                    765.1 lpm   (60.1 s, 2 samples)</span><br><span class="line">System Call Overhead                         246375.1 lps   (10.0 s, 7 samples)</span><br><span class="line"></span><br><span class="line">System Benchmarks Index Values               BASELINE       RESULT    INDEX</span><br><span class="line">Dhrystone 2 using register variables         116700.0   29235641.6   2505.2</span><br><span class="line">Double-Precision Whetstone                       55.0       3832.9    696.9</span><br><span class="line">Execl Throughput                                 43.0       2769.2    644.0</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks          3960.0     228633.4    577.4</span><br><span class="line">File Copy 256 bufsize 500 maxblocks            1655.0      58856.3    355.6</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks          5800.0     814329.1   1404.0</span><br><span class="line">Pipe Throughput                               12440.0     293850.7    236.2</span><br><span class="line">Pipe-based Context Switching                   4000.0      74232.1    185.6</span><br><span class="line">Process Creation                                126.0       7529.0    597.5</span><br><span class="line">Shell Scripts (1 concurrent)                     42.4       5896.6   1390.7</span><br><span class="line">Shell Scripts (8 concurrent)                      6.0        765.1   1275.2</span><br><span class="line">System Call Overhead                          15000.0     246375.1    164.3</span><br><span class="line">                                                                   ========</span><br><span class="line">System Benchmarks Index Score                                         606.4</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>服务器性能：相当滴辣鸡。</p>
+<p>网络情况：国内访问不错，毕竟是BGP线路，国外访问丢包。</p>
+<p><strong>价格情况：参加活动比较便宜，原价比较贵。</strong></p>
+<p>支付方式：微信，银行卡。</p>
+<p>能否建站： 可以，国外访问较差。</p>
+<p>工单服务：支持在线客服，工单回复也比较及时。</p>
+<p>商家口碑：口碑不错。</p>
+<p>能否退货：<strong>特价机型非特殊原因不退。</strong></p>
+<p>完。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/VPS/" rel="tag"># VPS</a>
+              <a href="/tags/%E9%87%91%E5%B1%B1%E4%BA%91/" rel="tag"># 金山云</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/07/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%9B%BD%E5%86%85%E8%BD%BB%E9%87%8F%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84/" rel="prev" title="腾讯云服务器测评：1CPU/2G内存/5M带宽国内轻量应用云服务器">
+      <i class="fa fa-chevron-left"></i> 腾讯云服务器测评：1CPU/2G内存/5M带宽国内轻量应用云服务器
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何购买"><span class="nav-number">1.</span> <span class="nav-text">如何购买</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制面板"><span class="nav-number">2.</span> <span class="nav-text">控制面板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主机配置"><span class="nav-number">3.</span> <span class="nav-text">主机配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IO测试"><span class="nav-number">4.</span> <span class="nav-text">IO测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络测试"><span class="nav-number">5.</span> <span class="nav-text">网络测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络丢包"><span class="nav-number">6.</span> <span class="nav-text">网络丢包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内存测试"><span class="nav-number">7.</span> <span class="nav-text">内存测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性能测试"><span class="nav-number">8.</span> <span class="nav-text">性能测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">9.</span> <span class="nav-text">总结</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">fly97</p>
+  <div class="site-description" itemprop="description">你不是我 怎么可能做到感同身受</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/wf09" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;wf09" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wf.09@qq.com" title="E-Mail → mailto:wf.09@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">fly97</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/ygbhf/clicklove/clicklove.js"></script>
+<script data-ad-client="ca-pub-2238291690005827" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</html>
