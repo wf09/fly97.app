@@ -1,16 +1,287 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>使用jsdelivrCDN加速github文件</title>
+    <url>/2020/06/20/%E4%BD%BF%E7%94%A8jsdelivrCDN%E5%8A%A0%E9%80%9Fgithub%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<p>jsDelivr 是国外的一家优秀的公共 CDN 服务提供商，也是首个「打通中国大陆（网宿公司运营）与海外的免费 CDN 服务」。</p>
+<a id="more"></a>
+
+<h3 id="jsDelivr-配置"><a href="#jsDelivr-配置" class="headerlink" title="jsDelivr 配置"></a>jsDelivr 配置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;wf09&#x2F;upload@master&#x2F;1.png</span><br></pre></td></tr></table></figure>
+
+<p>其中：</p>
+<ul>
+<li><code>gh</code> 表示来自 Github 的仓库</li>
+<li><code>wf09/upload</code> 指的是用户名/仓库名</li>
+<li><code>master</code> 仓库的分支</li>
+<li><code>1.png</code>仓库下的具体文件</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>jsdelivrCDN</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>腾讯云服务器测评：1CPU/2G内存/1M带宽国内云服务器</title>
+    <url>/2020/07/06/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%9B%BD%E5%86%85%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84/</url>
+    <content><![CDATA[<p>​    腾讯云是大家熟知的云服务品牌，也叫良心云。</p>
+<a id="more"></a>
+
+<p>​    此次介绍的是<code>云服务器CVM</code>。这个是2019年底参加活动时购入，本来想拿来做中转的，可是开通以后带宽只有1M，顿时傻了眼。因为是活动机型所以不能退款！只能拿来吃灰！借此机会提醒一下大家：参加活动时务必要看好说明！切记！切记。</p>
+<h3 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h3><p><a href="https://console.cloud.tencent.com/cvm/instance" target="_blank" rel="noopener">https://console.cloud.tencent.com/cvm/instance</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707192909670.png" alt=""></p>
+<h3 id="主机配置"><a href="#主机配置" class="headerlink" title="主机配置"></a>主机配置</h3><p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707193428121.png" alt=""></p>
+<p>其他配置：</p>
+<p>带宽：1Mbps（峰值）</p>
+<p>流量：无限</p>
+<p>数据中心：见下图</p>
+<p><strong>续费</strong>价格：<em>125</em> 元/月</p>
+<p>支持的系统镜像：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707193618708.png" alt=""></p>
+<p>支持的应用镜像：<img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707193654071.png" alt=""></p>
+<p>可以通过重置应用来切换系统！</p>
+<p>数据中心：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707193718143.png" alt=""></p>
+<h3 id="IO测试"><a href="#IO测试" class="headerlink" title="IO测试"></a>IO测试</h3><p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707193732518.png" alt=""></p>
+<p>IO稍稍比轻量差！</p>
+<h3 id="网络速度"><a href="#网络速度" class="headerlink" title="网络速度"></a>网络速度</h3><p>使用<code>bash &lt;(curl -Lso- https://cdn.jsdelivr.net/gh/wf09/superbench/superbench.sh)</code>进行全面测速。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707194008487.png" alt="">国内一般说来线路都不错，参考意义不大。</p>
+<h3 id="网络延迟"><a href="#网络延迟" class="headerlink" title="网络延迟"></a>网络延迟</h3><p>国内延迟不错，国外也可以。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707194243222.png" alt=""></p>
+<h3 id="网络丢包"><a href="#网络丢包" class="headerlink" title="网络丢包"></a>网络丢包</h3><p>测试时间晚上7点左右，国内表现较好。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707194636198.png" alt=""></p>
+<h3 id="内存测试"><a href="#内存测试" class="headerlink" title="内存测试"></a>内存测试</h3><p>使用以下命令进行内存测试：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install wget build-essential -y</span><br><span class="line">wget https://cdn.jsdelivr.net/gh/FunctionClub/Memtester/memtester.cpp</span><br><span class="line">g++ -l stdc++ memtester.cpp</span><br><span class="line">./a.out</span><br></pre></td></tr></table></figure>
+
+<p>最大能分配到1670MB</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707195146027.png" alt=""></p>
+<h3 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h3><p>执行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://ftp.fly97.cn/linux/UnixBench5.1.3.tgz</span><br><span class="line">tar -zxvf UnixBench5.1.3.tgz</span><br><span class="line">cd UnixBench</span><br><span class="line">make</span><br><span class="line">./Run</span><br></pre></td></tr></table></figure>
+
+<p>测试结果：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">========================================================================</span><br><span class="line">   BYTE UNIX Benchmarks (Version 5.1.3)</span><br><span class="line"></span><br><span class="line">   System: tencent-shanghai: GNU/Linux</span><br><span class="line">   OS: GNU/Linux -- 4.15.0-54-generic -- #58-Ubuntu SMP Mon Jun 24 10:55:24 UTC 2019</span><br><span class="line">   Machine: x86_64 (x86_64)</span><br><span class="line">   Language: en_US.utf8 (charmap="UTF-8", collate="UTF-8")</span><br><span class="line">   CPU 0: Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz (4788.7 bogomips)</span><br><span class="line">          x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET</span><br><span class="line">   19:52:05 up 30 min,  1 user,  load average: 0.27, 0.10, 0.05; runlevel 5</span><br><span class="line"></span><br><span class="line">------------------------------------------------------------------------</span><br><span class="line">Benchmark Run: Tue Jul 07 2020 19:52:06 - 20:20:35</span><br><span class="line">1 CPU in system; running 1 parallel copy of tests</span><br><span class="line"></span><br><span class="line">Dhrystone 2 using register variables       37136682.3 lps   (10.0 s, 7 samples)</span><br><span class="line">Double-Precision Whetstone                     4128.3 MWIPS (12.4 s, 7 samples)</span><br><span class="line">Execl Throughput                               4635.9 lps   (30.0 s, 2 samples)</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks        550523.4 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 256 bufsize 500 maxblocks          158636.0 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks       1484270.9 KBps  (30.0 s, 2 samples)</span><br><span class="line">Pipe Throughput                              821034.2 lps   (10.0 s, 7 samples)</span><br><span class="line">Pipe-based Context Switching                 213682.3 lps   (10.0 s, 7 samples)</span><br><span class="line">Process Creation                              12280.7 lps   (30.0 s, 2 samples)</span><br><span class="line">Shell Scripts (1 concurrent)                   8637.9 lpm   (60.0 s, 2 samples)</span><br><span class="line">Shell Scripts (8 concurrent)                   1112.0 lpm   (60.0 s, 2 samples)</span><br><span class="line">System Call Overhead                         497550.9 lps   (10.0 s, 7 samples)</span><br><span class="line"></span><br><span class="line">System Benchmarks Index Values               BASELINE       RESULT    INDEX</span><br><span class="line">Dhrystone 2 using register variables         116700.0   37136682.3   3182.2</span><br><span class="line">Double-Precision Whetstone                       55.0       4128.3    750.6</span><br><span class="line">Execl Throughput                                 43.0       4635.9   1078.1</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks          3960.0     550523.4   1390.2</span><br><span class="line">File Copy 256 bufsize 500 maxblocks            1655.0     158636.0    958.5</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks          5800.0    1484270.9   2559.1</span><br><span class="line">Pipe Throughput                               12440.0     821034.2    660.0</span><br><span class="line">Pipe-based Context Switching                   4000.0     213682.3    534.2</span><br><span class="line">Process Creation                                126.0      12280.7    974.7</span><br><span class="line">Shell Scripts (1 concurrent)                     42.4       8637.9   2037.2</span><br><span class="line">Shell Scripts (8 concurrent)                      6.0       1112.0   1853.4</span><br><span class="line">System Call Overhead                          15000.0     497550.9    331.7</span><br><span class="line">                                                                   ========</span><br><span class="line">System Benchmarks Index Score                                        1117.2</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>服务器性能：Intel的U，运算能力竟然比不上amd，磁盘IO也不错</p>
+<p>网络情况：国内访问延迟较低，国外访问丢包。<strong>带宽较小</strong>，只适合搭建博客等个人站点。</p>
+<p><strong>价格情况：价格不便宜，建议活动的时候入！性价比轻量略低！</strong></p>
+<p>计费方式：按月/年计费。</p>
+<p>支付方式：微信，银行卡。</p>
+<p>能否建站： 可以，国外访问较差。</p>
+<p>工单服务：回复比较及时。</p>
+<p>商家口碑：口碑不错。</p>
+<p><strong>能否退货：活动机型不支持五天无理由退款。切记！！</strong></p>
+<p>完。</p>
+]]></content>
+      <tags>
+        <tag>VPS</tag>
+        <tag>腾讯云</tag>
+        <tag>CVM</tag>
+        <tag>国内</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>腾讯云服务器测评：1CPU/2G内存/5M带宽国内轻量应用云服务器</title>
+    <url>/2020/07/07/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%9B%BD%E5%86%85%E8%BD%BB%E9%87%8F%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84/</url>
+    <content><![CDATA[<p>​    腾讯云，腾讯集团倾力打造的云计算品牌，面向全世界各个国家和地区的政府机构、企业组织和个人开发者，提供全球领先的云计算、大数据、人工智能等技术产品与服务，以卓越的科技能力打造丰富的行业解决方案，构建开放共赢的云端生态，推动产业互联网建设，助力各行各业实现数字化升级。</p>
+<a id="more"></a>
+
+<p>​    此次介绍的是<code>轻量应用服务器 Lighthouse</code>。轻量应用服务器（Lighthouse）当前在内测状态，仅对加入内测微信群的用户开放。可以通过添加云煮鸡微信（微信号：cvmfans）回复LH进群！</p>
+<h3 id="如何申请"><a href="#如何申请" class="headerlink" title="如何申请"></a>如何申请</h3><p>打开<a href="https://console.cloud.tencent.com/lighthouse/instance/index，点击申请开通。" target="_blank" rel="noopener">https://console.cloud.tencent.com/lighthouse/instance/index，点击申请开通。</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706211521374.png" alt="image-20200706211521374"></p>
+<p>填写表单，等待站内信回复。小编大概等了5个小时左右就成功开通了。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706211615286.png" alt="image-20200706211615286"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706211651013.png" alt="image-20200706211651013"></p>
+<h3 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h3><p><a href="https://console.cloud.tencent.com/lighthouse/instance/index" target="_blank" rel="noopener">https://console.cloud.tencent.com/lighthouse/instance/index</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706211756891.png" alt="image-20200706211756891"></p>
+<h3 id="主机配置"><a href="#主机配置" class="headerlink" title="主机配置"></a>主机配置</h3><p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706212006811.png" alt=""></p>
+<p>其他配置：</p>
+<p>带宽：5Mbps（峰值）</p>
+<p>流量：1000GB/月</p>
+<p>数据中心：北京/广州/上海 （以后推出香港）</p>
+<p>价格：<em>140</em> 元/月（最低配置价格为60元/月）</p>
+<p>支持的系统镜像：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706212324334.png" alt="image-20200706212324334"></p>
+<p>支持的应用镜像：<img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706212344512.png" alt="image-20200706212344512"></p>
+<p>可以通过重置应用来切换系统！</p>
+<h3 id="IO测试"><a href="#IO测试" class="headerlink" title="IO测试"></a>IO测试</h3><p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706212710077.png" alt="image-20200706212710077"></p>
+<p>IO速度比较快！</p>
+<h3 id="网络测试"><a href="#网络测试" class="headerlink" title="网络测试"></a>网络测试</h3><p>使用<code>bash &lt;(curl -Lso- https://cdn.jsdelivr.net/gh/wf09/superspeed/superspeed.sh)</code>进行全面测速。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706233855456.png" alt="image-20200706233855456">国内一般说来线路都不错。</p>
+<p><strong>下载速度测试：</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708201557993.png" alt=""></p>
+<h3 id="网络丢包"><a href="#网络丢包" class="headerlink" title="网络丢包"></a>网络丢包</h3><p>测试时间晚上9点左右，国内表现较好。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707205959840.png" alt=""></p>
+<h3 id="内存测试"><a href="#内存测试" class="headerlink" title="内存测试"></a>内存测试</h3><p>使用以下命令进行内存测试：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install wget build-essential -y</span><br><span class="line">wget https://cdn.jsdelivr.net/gh/FunctionClub/Memtester/memtester.cpp</span><br><span class="line">g++ -l stdc++ memtester.cpp</span><br><span class="line">./a.out</span><br></pre></td></tr></table></figure>
+
+<p>最大能分配到1660MB</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706215402112.png" alt=""></p>
+<h3 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h3><p>执行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://ftp.fly97.cn/linux/UnixBench5.1.3.tgz</span><br><span class="line">tar -zxvf UnixBench5.1.3.tgz</span><br><span class="line">cd UnixBench</span><br><span class="line">make</span><br><span class="line">./Run</span><br></pre></td></tr></table></figure>
+
+<p>测试结果： 1879.8</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">========================================================================</span><br><span class="line">   BYTE UNIX Benchmarks (Version 5.1.3)</span><br><span class="line"></span><br><span class="line">   System: VM-8-9-ubuntu: GNU/Linux</span><br><span class="line">   OS: GNU/Linux -- 4.15.0-88-generic -- #88-Ubuntu SMP Tue Feb 11 20:11:34 UTC 2020</span><br><span class="line">   Machine: x86_64 (x86_64)</span><br><span class="line">   Language: en_US.utf8 (charmap="UTF-8", collate="UTF-8")</span><br><span class="line">   CPU 0: AMD EPYC 7K62 48-Core Processor (5190.2 bogomips)</span><br><span class="line">          x86-64, MMX, AMD MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET</span><br><span class="line">   22:01:26 up 5 min,  1 user,  load average: 0.11, 0.22, 0.11; runlevel 5</span><br><span class="line"></span><br><span class="line">------------------------------------------------------------------------</span><br><span class="line">Benchmark Run: Mon Jul 06 2020 22:01:26 - 22:31:06</span><br><span class="line">1 CPU in system; running 1 parallel copy of tests</span><br><span class="line"></span><br><span class="line">Dhrystone 2 using register variables       39868669.2 lps   (10.0 s, 7 samples)</span><br><span class="line">Double-Precision Whetstone                     3161.5 MWIPS (20.0 s, 7 samples)</span><br><span class="line">Execl Throughput                               5599.4 lps   (30.0 s, 2 samples)</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks       1199684.7 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 256 bufsize 500 maxblocks          323022.4 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks       3465015.1 KBps  (30.0 s, 2 samples)</span><br><span class="line">Pipe Throughput                             1942962.2 lps   (10.0 s, 7 samples)</span><br><span class="line">Pipe-based Context Switching                 294012.1 lps   (10.0 s, 7 samples)</span><br><span class="line">Process Creation                              20476.3 lps   (30.0 s, 2 samples)</span><br><span class="line">Shell Scripts (1 concurrent)                  11446.9 lpm   (60.0 s, 2 samples)</span><br><span class="line">Shell Scripts (8 concurrent)                   1507.0 lpm   (60.0 s, 2 samples)</span><br><span class="line">System Call Overhead                        2554990.5 lps   (10.0 s, 7 samples)</span><br><span class="line"></span><br><span class="line">System Benchmarks Index Values               BASELINE       RESULT    INDEX</span><br><span class="line">Dhrystone 2 using register variables         116700.0   39868669.2   3416.3</span><br><span class="line">Double-Precision Whetstone                       55.0       3161.5    574.8</span><br><span class="line">Execl Throughput                                 43.0       5599.4   1302.2</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks          3960.0    1199684.7   3029.5</span><br><span class="line">File Copy 256 bufsize 500 maxblocks            1655.0     323022.4   1951.8</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks          5800.0    3465015.1   5974.2</span><br><span class="line">Pipe Throughput                               12440.0    1942962.2   1561.9</span><br><span class="line">Pipe-based Context Switching                   4000.0     294012.1    735.0</span><br><span class="line">Process Creation                                126.0      20476.3   1625.1</span><br><span class="line">Shell Scripts (1 concurrent)                     42.4      11446.9   2699.7</span><br><span class="line">Shell Scripts (8 concurrent)                      6.0       1507.0   2511.6</span><br><span class="line">System Call Overhead                          15000.0    2554990.5   1703.3</span><br><span class="line">                                                                   ========</span><br><span class="line">System Benchmarks Index Score                                        1879.8</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>服务器性能：AMD的U，运算能力还是满强的的，磁盘IO也很棒</p>
+<p>网络情况：国内访问延迟较低，国外访问丢包。</p>
+<p><strong>价格情况：价格不算便宜，不过现在可以免费体验。</strong></p>
+<p>计费方式：按月/年计费。</p>
+<p>支付方式：微信，银行卡。</p>
+<p>能否建站： 可以，国外访问较差。</p>
+<p>工单服务：回复比较及时。</p>
+<p>商家口碑：口碑不错。</p>
+<p>能否退货：支持七天无理由退款。</p>
+<p>完。</p>
+]]></content>
+      <tags>
+        <tag>VPS</tag>
+        <tag>腾讯云</tag>
+        <tag>Lighthouse</tag>
+        <tag>国内</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>金山云服务器测评：1CPU/2G内存/5M带宽国内云服务器</title>
+    <url>/2020/07/08/%E9%87%91%E5%B1%B1%E4%BA%91%E5%9B%BD%E5%86%85%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84/</url>
+    <content><![CDATA[<p>​    金山云创立于2012年，是中国前三的互联网云服务商，2020年5月在美国纳斯达克上市（股票代码：KC），业务范围遍及全球多个国家和地区。成立8年来，金山云始终坚持以客户为中心的服务理念，提供安全、可靠、稳定、高品质的云计算服务。</p>
+<a id="more"></a>
+
+<p>​    此次介绍的是<code>云服务器 基础型E1</code>。通过<strong>邀请新用户参团并购买</strong>老用户即可获得购买机会。</p>
+<p>参团链接：<a href="http://ksyun.com/s/cIyKG2" target="_blank" rel="noopener">http://ksyun.com/s/cIyKG2</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708191652276.png" alt="image-20200708191652276"></p>
+<h3 id="如何购买"><a href="#如何购买" class="headerlink" title="如何购买"></a>如何购买</h3><p>打开活动界面，点击注册账户。输入个人信息完成注册。微信扫码通过<strong>身份证号+人脸识别</strong>完成实名验证。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708192052498.png" alt=""></p>
+<p>实名验证后返回活动界面，点击拼团购买。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708192500858.png" alt=""></p>
+<h3 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h3><p><a href="https://kec.console.ksyun.com/v2/#/kec" target="_blank" rel="noopener">https://kec.console.ksyun.com/v2/#/kec</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708192800736.png" alt=""></p>
+<h3 id="主机配置"><a href="#主机配置" class="headerlink" title="主机配置"></a>主机配置</h3><p>通过运行<code>bash &lt;(curl -Lso- https://cdn.jsdelivr.net/gh/wf09/superbench/superbench.sh)</code>，查看基本的服务器信息。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708192947754.png" alt=""></p>
+<p>其他配置：</p>
+<p>带宽：5Mbps（峰值）</p>
+<p>流量：<strong>无限</strong></p>
+<p>数据中心：北京/广州/上海 </p>
+<p>价格：<em>88</em>一年（续费原价）</p>
+<p>支持的Linux镜像：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708193240582.png" alt=""></p>
+<p>支持的Windows镜像：<img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708193322805.png" alt=""></p>
+<p>可以通过重装系统来切换系统！</p>
+<h3 id="IO测试"><a href="#IO测试" class="headerlink" title="IO测试"></a>IO测试</h3><p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708193754329.png" alt=""></p>
+<p>IO速度<strong>非常快</strong>，就是不太稳定233。</p>
+<h3 id="网络测试"><a href="#网络测试" class="headerlink" title="网络测试"></a>网络测试</h3><p>使用<code>bash &lt;(curl -Lso- https://cdn.jsdelivr.net/gh/wf09/superspeed/superspeed.sh)</code>进行全面测速。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708195332125.png" alt="">国内一般说来线路都不错。</p>
+<p>下载速度测试：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708205032115.png" alt=""></p>
+<h3 id="网络丢包"><a href="#网络丢包" class="headerlink" title="网络丢包"></a>网络丢包</h3><p>测试时间晚上8点左右，国内表现较好。国外稍有丢包！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708195627952.png" alt=""></p>
+<h3 id="内存测试"><a href="#内存测试" class="headerlink" title="内存测试"></a>内存测试</h3><p>使用以下命令进行内存测试：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install wget build-essential -y</span><br><span class="line">wget https://cdn.jsdelivr.net/gh/FunctionClub/Memtester/memtester.cpp</span><br><span class="line">g++ -l stdc++ memtester.cpp</span><br><span class="line">./a.out</span><br></pre></td></tr></table></figure>
+
+<p>最大能分配到1820MB</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708195945433.png" alt=""></p>
+<h3 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h3><p>执行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://ftp.fly97.cn/linux/UnixBench5.1.3.tgz</span><br><span class="line">tar -zxvf UnixBench5.1.3.tgz</span><br><span class="line">cd UnixBench</span><br><span class="line">make</span><br><span class="line">./Run</span><br></pre></td></tr></table></figure>
+
+<p>测试结果：  </p>
+<p>仅有606.4！！</p>
+<p>虽然官宣是<strong>Intel Xeon E5</strong>系列处理器。但是性能跑分非常不理想！</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">========================================================================</span><br><span class="line">   BYTE UNIX Benchmarks (Version 5.1.3)</span><br><span class="line"></span><br><span class="line">   System: vm10-0-1-93: GNU/Linux</span><br><span class="line">   OS: GNU/Linux -- 4.15.0-29-generic -- #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018</span><br><span class="line">   Machine: x86_64 (x86_64)</span><br><span class="line">   Language: en_US.utf8 (charmap="UTF-8", collate="UTF-8")</span><br><span class="line">   CPU 0: Ksyun Virtual CPU(ksyun-cpu64) (4988.4 bogomips)</span><br><span class="line">          x86-64, MMX, Physical Address Ext, SYSCALL/SYSRET</span><br><span class="line">   20:02:57 up  1:13,  1 user,  load average: 0.09, 0.09, 0.04; runlevel 5</span><br><span class="line"></span><br><span class="line">------------------------------------------------------------------------</span><br><span class="line">Benchmark Run: Wed Jul 08 2020 20:02:57 - 20:31:05</span><br><span class="line">1 CPU in system; running 1 parallel copy of tests</span><br><span class="line"></span><br><span class="line">Dhrystone 2 using register variables       29235641.6 lps   (10.0 s, 7 samples)</span><br><span class="line">Double-Precision Whetstone                     3832.9 MWIPS (9.9 s, 7 samples)</span><br><span class="line">Execl Throughput                               2769.2 lps   (30.0 s, 2 samples)</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks        228633.4 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 256 bufsize 500 maxblocks           58856.3 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks        814329.1 KBps  (30.0 s, 2 samples)</span><br><span class="line">Pipe Throughput                              293850.7 lps   (10.0 s, 7 samples)</span><br><span class="line">Pipe-based Context Switching                  74232.1 lps   (10.0 s, 7 samples)</span><br><span class="line">Process Creation                               7529.0 lps   (30.0 s, 2 samples)</span><br><span class="line">Shell Scripts (1 concurrent)                   5896.6 lpm   (60.0 s, 2 samples)</span><br><span class="line">Shell Scripts (8 concurrent)                    765.1 lpm   (60.1 s, 2 samples)</span><br><span class="line">System Call Overhead                         246375.1 lps   (10.0 s, 7 samples)</span><br><span class="line"></span><br><span class="line">System Benchmarks Index Values               BASELINE       RESULT    INDEX</span><br><span class="line">Dhrystone 2 using register variables         116700.0   29235641.6   2505.2</span><br><span class="line">Double-Precision Whetstone                       55.0       3832.9    696.9</span><br><span class="line">Execl Throughput                                 43.0       2769.2    644.0</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks          3960.0     228633.4    577.4</span><br><span class="line">File Copy 256 bufsize 500 maxblocks            1655.0      58856.3    355.6</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks          5800.0     814329.1   1404.0</span><br><span class="line">Pipe Throughput                               12440.0     293850.7    236.2</span><br><span class="line">Pipe-based Context Switching                   4000.0      74232.1    185.6</span><br><span class="line">Process Creation                                126.0       7529.0    597.5</span><br><span class="line">Shell Scripts (1 concurrent)                     42.4       5896.6   1390.7</span><br><span class="line">Shell Scripts (8 concurrent)                      6.0        765.1   1275.2</span><br><span class="line">System Call Overhead                          15000.0     246375.1    164.3</span><br><span class="line">                                                                   ========</span><br><span class="line">System Benchmarks Index Score                                         606.4</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>服务器性能：相当滴辣鸡。</p>
+<p>网络情况：国内访问不错，毕竟是BGP线路，国外访问丢包。</p>
+<p><strong>价格情况：参加活动比较便宜，原价比较贵。</strong></p>
+<p>支付方式：微信，银行卡。</p>
+<p>能否建站： 可以，国外访问较差。</p>
+<p>工单服务：支持在线客服，工单回复也比较及时。</p>
+<p>商家口碑：口碑不错。</p>
+<p>能否退货：<strong>特价机型非特殊原因不退。</strong></p>
+<p>完。</p>
+]]></content>
+      <tags>
+        <tag>VPS</tag>
+        <tag>金山云</tag>
+        <tag>国内</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>v2ray快速上手全记录</title>
+    <url>/2020/04/23/v2ray%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E5%85%A8%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>快速上手v2ray</p>
+<a id="more"></a>
+
+<h5 id="1-下载并运行脚本"><a href="#1-下载并运行脚本" class="headerlink" title="1.下载并运行脚本"></a>1.下载并运行脚本</h5><p>需要先安装curl：<code>apt-get install curl</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -L -s https://install.direct/go.sh)</span><br></pre></td></tr></table></figure>
+
+<p>安装完毕后使用以下命令启动</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl start v2ray</span><br></pre></td></tr></table></figure>
+
+<p>以服务方式启动，开机自启动</p>
+<h5 id="2-caddy-websockset"><a href="#2-caddy-websockset" class="headerlink" title="2.caddy+websockset"></a>2.caddy+websockset</h5><h6 id="2-1服务端"><a href="#2-1服务端" class="headerlink" title="2.1服务端"></a>2.1服务端</h6><p>安装caddy：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://git.io/vra5C -O - -o /dev/null|bash</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>安装证书时需要查看端口是否占用</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsof -i:443</span><br></pre></td></tr></table></figure>
+
+<p>编辑v2ray配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/v2ray/config.json</span><br></pre></td></tr></table></figure>
+
+<p>最简单的配置文件：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="attr">"log"</span>: &#123;</span><br><span class="line">    <span class="attr">"loglevel"</span>: <span class="string">"warning"</span>,</span><br><span class="line">    <span class="attr">"access"</span>: <span class="string">"/var/log/v2ray/access.log"</span>,</span><br><span class="line">    <span class="attr">"error"</span>: <span class="string">"/var/log/v2ray/error.log"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"inbounds"</span>: [</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">"port"</span>: <span class="number">10000</span>,  <span class="comment">//端口号</span></span><br><span class="line">    <span class="attr">"listen"</span>:<span class="string">"127.0.0.1"</span>,  <span class="comment">//默认只监听内网ip</span></span><br><span class="line">    <span class="attr">"protocol"</span>: <span class="string">"vmess"</span>,  <span class="comment">//加密协议</span></span><br><span class="line">    <span class="attr">"settings"</span>: &#123;</span><br><span class="line">      <span class="attr">"clients"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"id"</span>: <span class="string">"c4ef8fef-91b9-4f84-8b81-8aae98f3b7f9"</span>,    <span class="comment">//uuid</span></span><br><span class="line">          <span class="attr">"alterId"</span>: <span class="number">32</span> <span class="comment">//附加id</span></span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;,</span><br><span class="line">   <span class="attr">"streamSettings"</span>: &#123;</span><br><span class="line">        <span class="attr">"network"</span>:<span class="string">"ws"</span>,  <span class="comment">//传输方式</span></span><br><span class="line">        <span class="attr">"wsSettings"</span>: &#123;</span><br><span class="line">        <span class="attr">"path"</span>: <span class="string">"/app"</span>  <span class="comment">//分流路径</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"> &#125;</span><br><span class="line">],</span><br><span class="line">  <span class="attr">"outbounds"</span>: [</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">"protocol"</span>: <span class="string">"freedom"</span>,</span><br><span class="line">    <span class="attr">"settings"</span>: &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编辑caddy配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">caddy edit</span><br></pre></td></tr></table></figure>
+
+<p>最简单的caddy配置文件：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">http://yoursite &#123;</span></span><br><span class="line">        root /var/caddywww/</span><br><span class="line">        gzip</span><br><span class="line">        tls off</span><br><span class="line">        log /var/log/caddy/access.log</span><br><span class="line">        errors /var/log/caddy/error.log</span><br><span class="line">        proxy /app localhost:10000 &#123;</span><br><span class="line">        websocket</span><br><span class="line">        header_upstream -Origin</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-2客户端"><a href="#2-2客户端" class="headerlink" title="2.2客户端"></a>2.2客户端</h6><p>建议使用clash，支持win和安卓平台</p>
+<p>win平台：</p>
+<p><a href="https://github.com/Fndroid/clash_for_windows_pkg/releases" target="_blank" rel="noopener">https://github.com/Fndroid/clash_for_windows_pkg/releases</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200423211355498.png" alt="image-20200423211355498"></p>
+<p>其中配置文件需要自己编写，支持快速分流。</p>
+<p>重点介绍以下v2ray部分的配置文件。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Will be ignored after profile selection</span><br><span class="line">Proxy:</span><br><span class="line">  - name: gost</span><br><span class="line">    type: socks5</span><br><span class="line">    server: 127.0.0.1</span><br><span class="line">    port: 1080</span><br><span class="line">  - name: v2ray</span><br><span class="line">    type: vmess</span><br><span class="line">    server: yoursite</span><br><span class="line">    uuid: &quot;c4ef8fef-91b9-4f84-8b81-8aae98f3b7f9&quot;</span><br><span class="line">    port: 80</span><br><span class="line">    cipher: &quot;auto&quot;</span><br><span class="line">    udp: false</span><br><span class="line">    network: ws</span><br><span class="line">    ws-path: &quot;&#x2F;app&quot;</span><br><span class="line">    tls: false</span><br><span class="line">    alterId: 32</span><br><span class="line">Proxy Group:</span><br><span class="line">  - name: Proxy</span><br><span class="line">    type: select</span><br><span class="line">    proxies:</span><br><span class="line">      - gost</span><br><span class="line">      - v2ray</span><br><span class="line">Rule:</span><br><span class="line">- DOMAIN-SUFFIX,aliyun,Proxy</span><br><span class="line">- DOMAIN,fly97.cn,Proxy</span><br><span class="line">- DOMAIN-SUFFIX,alibabacloud,Proxy</span><br><span class="line">- DOMAIN-SUFFIX,cn,DIRECT</span><br><span class="line"></span><br><span class="line"># ad tracks</span><br><span class="line">- DOMAIN,graph.instagram.com,DIRECT</span><br><span class="line">- DOMAIN,www.googleadservices.com,DIRECT</span><br><span class="line">- DOMAIN,control.kochava.com,DIRECT</span><br><span class="line">- DOMAIN,www.google-analytics.com,DIRECT</span><br><span class="line">- DOMAIN,ssl.google-analytics.com,DIRECT</span><br><span class="line">- DOMAIN,nexus.officeapps.live.com,DIRECT</span><br><span class="line">- DOMAIN,googleads.g.doubleclick.net,DIRECT</span><br><span class="line">- DOMAIN,e.crashlytics.com,DIRECT</span><br><span class="line">- DOMAIN,ib.adnxs.com,DIRECT</span><br><span class="line">- DOMAIN-SUFFIX,googlesyndication.com,DIRECT</span><br><span class="line">- DOMAIN-SUFFIX,googletagmanager.com,DIRECT</span><br><span class="line">- DOMAIN-SUFFIX,googletagservices.com,DIRECT</span><br><span class="line">- DOMAIN,safebrowsing.googleapis.com,DIRECT</span><br><span class="line"></span><br><span class="line">- DOMAIN,google.com,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,paypal,DIRECT</span><br><span class="line">- DOMAIN-SUFFIX,google.com,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,facebook,Proxy</span><br><span class="line">- DOMAIN-SUFFIX,fb.me,Proxy</span><br><span class="line">- DOMAIN-SUFFIX,fbcdn.net,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,gmail,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,twitter,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,instagram,Proxy</span><br><span class="line">- DOMAIN-SUFFIX,twimg.com,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,blogspot,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,whatsapp,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,scholar,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,glados,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,mailgun,Proxy</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- DOMAIN-KEYWORD,weibo,DIRECT</span><br><span class="line">- DOMAIN-KEYWORD,hostloc,DIRECT</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-caddy-websocket-tls"><a href="#3-caddy-websocket-tls" class="headerlink" title="3.caddy+websocket+tls"></a>3.caddy+websocket+tls</h5><p>首先第二步中服务器端口换成443</p>
+<p>其次更改caddy配置文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;yoursite &#123;</span><br><span class="line">        root &#x2F;var&#x2F;caddywww&#x2F;</span><br><span class="line">        gzip</span><br><span class="line">        tls yoursite@mail</span><br><span class="line">        log &#x2F;var&#x2F;log&#x2F;caddy&#x2F;access.log</span><br><span class="line">        errors &#x2F;var&#x2F;log&#x2F;caddy&#x2F;error.log</span><br><span class="line">        proxy &#x2F;app localhost:10000 &#123;</span><br><span class="line">        websocket</span><br><span class="line">        header_upstream -Origin</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-caddy-tls-web"><a href="#4-caddy-tls-web" class="headerlink" title="4.caddy+tls+web"></a>4.caddy+tls+web</h5><p>优点：减少tls握手时间</p>
+<h6 id="安装tls分流器"><a href="#安装tls分流器" class="headerlink" title="安装tls分流器"></a>安装tls分流器</h6><p>对于 linux-amd64 可以使用脚本安装，以 root 身份执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -L -s https://raw.githubusercontent.com/liberal-boy/tls-shunt-proxy/master/dist/install.sh)</span><br></pre></td></tr></table></figure>
+
+<p>配置文件位于：<code>/etc/tls-shunt-proxy/config.yaml</code></p>
+<p>项目地址：<a href="https://github.com/liberal-boy/tls-shunt-proxy" target="_blank" rel="noopener">https://github.com/liberal-boy/tls-shunt-proxy</a></p>
+<h6 id="修改分流器配置文件"><a href="#修改分流器配置文件" class="headerlink" title="修改分流器配置文件"></a>修改分流器配置文件</h6><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">listen:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span><span class="string">:443</span></span><br><span class="line"><span class="attr">vhosts:</span></span><br><span class="line">    <span class="comment"># 将 example.com 改为你的域名</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">example.com</span></span><br><span class="line">    <span class="attr">tlsoffloading:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">managedcert:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">alpn:</span> <span class="string">h2,http/1.1</span></span><br><span class="line">    <span class="comment"># 如果不需要兼容 tls12, 可改为 tls13</span></span><br><span class="line">    <span class="attr">protocols:</span> <span class="string">tls12,tls13</span></span><br><span class="line">    <span class="attr">http:</span></span><br><span class="line">      <span class="attr">handler:</span> <span class="string">fileServer</span></span><br><span class="line">      <span class="comment"># /var/www/html 是静态网站目录</span></span><br><span class="line">      <span class="attr">args:</span> <span class="string">/var/www/html</span></span><br><span class="line">    <span class="attr">default:</span></span><br><span class="line">      <span class="attr">handler:</span> <span class="string">proxyPass</span></span><br><span class="line">      <span class="attr">args:</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">:40001</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="修改v2ray配置文件"><a href="#修改v2ray配置文件" class="headerlink" title="修改v2ray配置文件"></a>修改v2ray配置文件</h6><p>编辑文件：<code>vim /etc/v2ray/config.json</code></p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"inbounds"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"protocol"</span>: <span class="string">"vmess"</span>,</span><br><span class="line">            <span class="attr">"listen"</span>: <span class="string">"127.0.0.1"</span>,</span><br><span class="line">            <span class="attr">"port"</span>: <span class="number">40001</span>,</span><br><span class="line">            <span class="attr">"settings"</span>: &#123;</span><br><span class="line">                <span class="attr">"clients"</span>: [</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="attr">"id"</span>: <span class="string">"f2435e5c-9ad9-4367-836a-8341117d0a5f"</span></span><br><span class="line">                    &#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">"streamSettings"</span>: &#123;</span><br><span class="line">                <span class="attr">"network"</span>: <span class="string">"tcp"</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"outbounds"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"protocol"</span>: <span class="string">"freedom"</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="重启服务"><a href="#重启服务" class="headerlink" title="重启服务"></a>重启服务</h6><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl restart tls-shunt-proxy</span><br><span class="line">systemctl restart v2ray</span><br></pre></td></tr></table></figure>
+
+<h6 id="客户端连接"><a href="#客户端连接" class="headerlink" title="客户端连接"></a>客户端连接</h6><p>客户端连接<code>example.com:443 vmess tls</code>即可</p>
+<p>转载自：</p>
+<p><a href="https://guide.v2fly.org/advanced/tcp_tls_shunt_proxy.html#实现" target="_blank" rel="noopener">https://guide.v2fly.org/advanced/tcp_tls_shunt_proxy.html#%E5%AE%9E%E7%8E%B0</a></p>
+]]></content>
+      <tags>
+        <tag>v2ray</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>G-core服务器测评：1CPU/700MB内存/500MB带宽俄罗斯特价服务器</title>
-    <url>/2020/06/27/G-core%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84/</url>
+    <url>/2020/06/27/G-core%E4%BF%84%E7%BD%97%E6%96%AF%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84/</url>
     <content><![CDATA[<p><code>Gcore VPS</code>是一家来自俄罗斯的VPS主机商。Gcore VPS的机房遍布世界各地，主要有俄罗斯的莫斯科、伯力，韩国首尔，日本东京，美国芝加哥、迈阿密，以及澳大利亚悉尼、荷兰阿姆斯特丹、巴西圣保罗等。</p>
 <p>目前<code>Gcore</code>新出了一款仅需要月付88卢布，折合人民币不到10元的伯力节点的小号VPS，性价比非常的突出。这个机房电信联通直连，移动绕路的很厉害。这篇文章就来说说如何注册购买这款8元每月的服务器。</p>
 <a id="more"></a>
 
 <h3 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h3><p>​    官网：<a href="https://gcorelabs.com/ru/?from=5012791" target="_blank" rel="noopener">https://gcorelabs.com</a></p>
 <p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200627231358305.png" alt=""></p>
-<p>选择<a href="https://gcorelabs.com/hosting/vds/" target="_blank" rel="noopener">Virtual Servers</a>，点击<code>Get Started for free</code> 注册账号。</p>
-<p>​    后台地址：<a href="https://ruhosting.gcorelabs.com/billmgr" target="_blank" rel="noopener">https://ruhosting.gcorelabs.com/billmgr</a></p>
+<p>选择<a href="https://gcorelabs.com/hosting/vds/" target="_blank" rel="noopener">Virtual Servers</a>，点击<code>Get Started for free</code> 注册账号。<br>注意：一定要注册<strong>俄区</strong>的账号，俄区的服务器比较便宜。如下图所示：只是网页显示的是俄语，需要打开<strong>谷歌翻译</strong>才能正常食用。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200715122124544.png" alt=""></p>
+<p>或者是直接打开    </p>
+<p><a href="https://ruhosting.gcorelabs.com/billmgr?func=register&amp;lang=en" target="_blank" rel="noopener">https://ruhosting.gcorelabs.com/billmgr?func=register&amp;lang=en</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200715122527145.png" alt=""></p>
+<p>后台地址：<a href="https://ruhosting.gcorelabs.com/billmgr" target="_blank" rel="noopener">https://ruhosting.gcorelabs.com/billmgr</a></p>
 <p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200627231538573.png" alt="image-20200627231538573"></p>
 <h3 id="购买"><a href="#购买" class="headerlink" title="购买"></a>购买</h3><p>​    登录后点击<code>Order a service</code>，选择<code>VPS</code>。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200627232144681.png" alt="image-20200627232144681"></p>
@@ -89,32 +360,12 @@
       <tags>
         <tag>G-core</tag>
         <tag>VPS</tag>
+        <tag>俄罗斯</tag>
       </tags>
   </entry>
   <entry>
-    <title>使用jsdelivrCDN加速github文件</title>
-    <url>/2020/06/20/%E4%BD%BF%E7%94%A8jsdelivrCDN%E5%8A%A0%E9%80%9Fgithub%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<p>jsDelivr 是国外的一家优秀的公共 CDN 服务提供商，也是首个「打通中国大陆（网宿公司运营）与海外的免费 CDN 服务」。</p>
-<a id="more"></a>
-
-<h3 id="jsDelivr-配置"><a href="#jsDelivr-配置" class="headerlink" title="jsDelivr 配置"></a>jsDelivr 配置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;wf09&#x2F;upload@master&#x2F;1.png</span><br></pre></td></tr></table></figure>
-
-<p>其中：</p>
-<ul>
-<li><code>gh</code> 表示来自 Github 的仓库</li>
-<li><code>wf09/upload</code> 指的是用户名/仓库名</li>
-<li><code>master</code> 仓库的分支</li>
-<li><code>1.png</code>仓库下的具体文件</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>jsdelivrCDN</tag>
-        <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AWS服务器测评：1CPU/1GB内存/7GB硬盘/EC2服务器</title>
-    <url>/2020/06/28/AWS%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84/</url>
+    <title>AWS服务器测评：1CPU/1GB内存/7GB硬盘/日本EC2服务器</title>
+    <url>/2020/06/28/AWS%E6%97%A5%E6%9C%AC%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84/</url>
     <content><![CDATA[<p>​    <code>Amazon Web Services (AWS)</code>亚马逊云计算服务，由亚马逊公司所创建的云计算平台，向个人、企业和政府提供一系列包括信息技术基础架构和应用的服务，如存储、数据库、计算、机器学习等等。AWS提供的大多数服务都使用按需付费的收费模式，按照用户使用资源的级别和时长收费。</p>
 <p>​    <code>AWS</code>提供免费的<code>EC2</code>实例，每月提供最多<code>750小时</code>的运行时间，<code>15GB</code>的流出流量，对于小流量玩家来说是绰绰有余。下面跟随小编来看一下如何创建EC2服务器吧~</p>
 <a id="more"></a>
@@ -188,128 +439,13 @@
       <tags>
         <tag>VPS</tag>
         <tag>AWS</tag>
+        <tag>EC2</tag>
+        <tag>日本</tag>
       </tags>
   </entry>
   <entry>
-    <title>腾讯云服务器测评：1CPU/2G内存/1M带宽国内云服务器</title>
-    <url>/2020/07/06/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%9B%BD%E5%86%85%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84/</url>
-    <content><![CDATA[<p>​    腾讯云是大家熟知的云服务品牌，也叫良心云。</p>
-<a id="more"></a>
-
-<p>​    此次介绍的是<code>云服务器CVM</code>。这个是2019年底参加活动时购入，本来想拿来做中转的，可是开通以后带宽只有1M，顿时傻了眼。因为是活动机型所以不能退款！只能拿来吃灰！借此机会提醒一下大家：参加活动时务必要看好说明！切记！切记。</p>
-<h3 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h3><p><a href="https://console.cloud.tencent.com/cvm/instance" target="_blank" rel="noopener">https://console.cloud.tencent.com/cvm/instance</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707192909670.png" alt=""></p>
-<h3 id="主机配置"><a href="#主机配置" class="headerlink" title="主机配置"></a>主机配置</h3><p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707193428121.png" alt=""></p>
-<p>其他配置：</p>
-<p>带宽：1Mbps（峰值）</p>
-<p>流量：无限</p>
-<p>数据中心：见下图</p>
-<p><strong>续费</strong>价格：<em>125</em> 元/月</p>
-<p>支持的系统镜像：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707193618708.png" alt=""></p>
-<p>支持的应用镜像：<img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707193654071.png" alt=""></p>
-<p>可以通过重置应用来切换系统！</p>
-<p>数据中心：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707193718143.png" alt=""></p>
-<h3 id="IO测试"><a href="#IO测试" class="headerlink" title="IO测试"></a>IO测试</h3><p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707193732518.png" alt=""></p>
-<p>IO稍稍比轻量差！</p>
-<h3 id="网络速度"><a href="#网络速度" class="headerlink" title="网络速度"></a>网络速度</h3><p>使用<code>bash &lt;(curl -Lso- https://cdn.jsdelivr.net/gh/wf09/superbench/superbench.sh)</code>进行全面测速。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707194008487.png" alt="">国内一般说来线路都不错，参考意义不大。</p>
-<h3 id="网络延迟"><a href="#网络延迟" class="headerlink" title="网络延迟"></a>网络延迟</h3><p>国内延迟不错，国外也可以。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707194243222.png" alt=""></p>
-<h3 id="网络丢包"><a href="#网络丢包" class="headerlink" title="网络丢包"></a>网络丢包</h3><p>测试时间晚上7点左右，国内表现较好。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707194636198.png" alt=""></p>
-<h3 id="内存测试"><a href="#内存测试" class="headerlink" title="内存测试"></a>内存测试</h3><p>使用以下命令进行内存测试：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install wget build-essential -y</span><br><span class="line">wget https://cdn.jsdelivr.net/gh/FunctionClub/Memtester/memtester.cpp</span><br><span class="line">g++ -l stdc++ memtester.cpp</span><br><span class="line">./a.out</span><br></pre></td></tr></table></figure>
-
-<p>最大能分配到1670MB</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707195146027.png" alt=""></p>
-<h3 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h3><p>执行以下命令：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://ftp.fly97.cn/linux/UnixBench5.1.3.tgz</span><br><span class="line">tar -zxvf UnixBench5.1.3.tgz</span><br><span class="line">cd UnixBench</span><br><span class="line">make</span><br><span class="line">./Run</span><br></pre></td></tr></table></figure>
-
-<p>测试结果：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">========================================================================</span><br><span class="line">   BYTE UNIX Benchmarks (Version 5.1.3)</span><br><span class="line"></span><br><span class="line">   System: tencent-shanghai: GNU/Linux</span><br><span class="line">   OS: GNU/Linux -- 4.15.0-54-generic -- #58-Ubuntu SMP Mon Jun 24 10:55:24 UTC 2019</span><br><span class="line">   Machine: x86_64 (x86_64)</span><br><span class="line">   Language: en_US.utf8 (charmap="UTF-8", collate="UTF-8")</span><br><span class="line">   CPU 0: Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz (4788.7 bogomips)</span><br><span class="line">          x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET</span><br><span class="line">   19:52:05 up 30 min,  1 user,  load average: 0.27, 0.10, 0.05; runlevel 5</span><br><span class="line"></span><br><span class="line">------------------------------------------------------------------------</span><br><span class="line">Benchmark Run: Tue Jul 07 2020 19:52:06 - 20:20:35</span><br><span class="line">1 CPU in system; running 1 parallel copy of tests</span><br><span class="line"></span><br><span class="line">Dhrystone 2 using register variables       37136682.3 lps   (10.0 s, 7 samples)</span><br><span class="line">Double-Precision Whetstone                     4128.3 MWIPS (12.4 s, 7 samples)</span><br><span class="line">Execl Throughput                               4635.9 lps   (30.0 s, 2 samples)</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks        550523.4 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 256 bufsize 500 maxblocks          158636.0 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks       1484270.9 KBps  (30.0 s, 2 samples)</span><br><span class="line">Pipe Throughput                              821034.2 lps   (10.0 s, 7 samples)</span><br><span class="line">Pipe-based Context Switching                 213682.3 lps   (10.0 s, 7 samples)</span><br><span class="line">Process Creation                              12280.7 lps   (30.0 s, 2 samples)</span><br><span class="line">Shell Scripts (1 concurrent)                   8637.9 lpm   (60.0 s, 2 samples)</span><br><span class="line">Shell Scripts (8 concurrent)                   1112.0 lpm   (60.0 s, 2 samples)</span><br><span class="line">System Call Overhead                         497550.9 lps   (10.0 s, 7 samples)</span><br><span class="line"></span><br><span class="line">System Benchmarks Index Values               BASELINE       RESULT    INDEX</span><br><span class="line">Dhrystone 2 using register variables         116700.0   37136682.3   3182.2</span><br><span class="line">Double-Precision Whetstone                       55.0       4128.3    750.6</span><br><span class="line">Execl Throughput                                 43.0       4635.9   1078.1</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks          3960.0     550523.4   1390.2</span><br><span class="line">File Copy 256 bufsize 500 maxblocks            1655.0     158636.0    958.5</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks          5800.0    1484270.9   2559.1</span><br><span class="line">Pipe Throughput                               12440.0     821034.2    660.0</span><br><span class="line">Pipe-based Context Switching                   4000.0     213682.3    534.2</span><br><span class="line">Process Creation                                126.0      12280.7    974.7</span><br><span class="line">Shell Scripts (1 concurrent)                     42.4       8637.9   2037.2</span><br><span class="line">Shell Scripts (8 concurrent)                      6.0       1112.0   1853.4</span><br><span class="line">System Call Overhead                          15000.0     497550.9    331.7</span><br><span class="line">                                                                   ========</span><br><span class="line">System Benchmarks Index Score                                        1117.2</span><br></pre></td></tr></table></figure>
-
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>服务器性能：Intel的U，运算能力竟然比不上amd，磁盘IO也不错</p>
-<p>网络情况：国内访问延迟较低，国外访问丢包。<strong>带宽较小</strong>，只适合搭建博客等个人站点。</p>
-<p><strong>价格情况：价格不便宜，建议活动的时候入！性价比轻量略低！</strong></p>
-<p>计费方式：按月/年计费。</p>
-<p>支付方式：微信，银行卡。</p>
-<p>能否建站： 可以，国外访问较差。</p>
-<p>工单服务：回复比较及时。</p>
-<p>商家口碑：口碑不错。</p>
-<p><strong>能否退货：活动机型不支持五天无理由退款。切记！！</strong></p>
-<p>完。</p>
-]]></content>
-      <tags>
-        <tag>VPS</tag>
-        <tag>腾讯云</tag>
-        <tag>CVM</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>腾讯云服务器测评：1CPU/2G内存/5M带宽国内轻量应用云服务器</title>
-    <url>/2020/07/07/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%9B%BD%E5%86%85%E8%BD%BB%E9%87%8F%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84/</url>
-    <content><![CDATA[<p>​    腾讯云，腾讯集团倾力打造的云计算品牌，面向全世界各个国家和地区的政府机构、企业组织和个人开发者，提供全球领先的云计算、大数据、人工智能等技术产品与服务，以卓越的科技能力打造丰富的行业解决方案，构建开放共赢的云端生态，推动产业互联网建设，助力各行各业实现数字化升级。</p>
-<a id="more"></a>
-
-<p>​    此次介绍的是<code>轻量应用服务器 Lighthouse</code>。轻量应用服务器（Lighthouse）当前在内测状态，仅对加入内测微信群的用户开放。可以通过添加云煮鸡微信（微信号：cvmfans）回复LH进群！</p>
-<h3 id="如何申请"><a href="#如何申请" class="headerlink" title="如何申请"></a>如何申请</h3><p>打开<a href="https://console.cloud.tencent.com/lighthouse/instance/index，点击申请开通。" target="_blank" rel="noopener">https://console.cloud.tencent.com/lighthouse/instance/index，点击申请开通。</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706211521374.png" alt="image-20200706211521374"></p>
-<p>填写表单，等待站内信回复。小编大概等了5个小时左右就成功开通了。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706211615286.png" alt="image-20200706211615286"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706211651013.png" alt="image-20200706211651013"></p>
-<h3 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h3><p><a href="https://console.cloud.tencent.com/lighthouse/instance/index" target="_blank" rel="noopener">https://console.cloud.tencent.com/lighthouse/instance/index</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706211756891.png" alt="image-20200706211756891"></p>
-<h3 id="主机配置"><a href="#主机配置" class="headerlink" title="主机配置"></a>主机配置</h3><p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706212006811.png" alt=""></p>
-<p>其他配置：</p>
-<p>带宽：5Mbps（峰值）</p>
-<p>流量：1000GB/月</p>
-<p>数据中心：北京/广州/上海 （以后推出香港）</p>
-<p>价格：<em>140</em> 元/月（最低配置价格为60元/月）</p>
-<p>支持的系统镜像：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706212324334.png" alt="image-20200706212324334"></p>
-<p>支持的应用镜像：<img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706212344512.png" alt="image-20200706212344512"></p>
-<p>可以通过重置应用来切换系统！</p>
-<h3 id="IO测试"><a href="#IO测试" class="headerlink" title="IO测试"></a>IO测试</h3><p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706212710077.png" alt="image-20200706212710077"></p>
-<p>IO速度比较快！</p>
-<h3 id="网络测试"><a href="#网络测试" class="headerlink" title="网络测试"></a>网络测试</h3><p>使用<code>bash &lt;(curl -Lso- https://cdn.jsdelivr.net/gh/wf09/superspeed/superspeed.sh)</code>进行全面测速。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706233855456.png" alt="image-20200706233855456">国内一般说来线路都不错。</p>
-<p><strong>下载速度测试：</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708201557993.png" alt=""></p>
-<h3 id="网络丢包"><a href="#网络丢包" class="headerlink" title="网络丢包"></a>网络丢包</h3><p>测试时间晚上9点左右，国内表现较好。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200707205959840.png" alt=""></p>
-<h3 id="内存测试"><a href="#内存测试" class="headerlink" title="内存测试"></a>内存测试</h3><p>使用以下命令进行内存测试：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install wget build-essential -y</span><br><span class="line">wget https://cdn.jsdelivr.net/gh/FunctionClub/Memtester/memtester.cpp</span><br><span class="line">g++ -l stdc++ memtester.cpp</span><br><span class="line">./a.out</span><br></pre></td></tr></table></figure>
-
-<p>最大能分配到1660MB</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200706215402112.png" alt=""></p>
-<h3 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h3><p>执行以下命令：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://ftp.fly97.cn/linux/UnixBench5.1.3.tgz</span><br><span class="line">tar -zxvf UnixBench5.1.3.tgz</span><br><span class="line">cd UnixBench</span><br><span class="line">make</span><br><span class="line">./Run</span><br></pre></td></tr></table></figure>
-
-<p>测试结果： 1879.8</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">========================================================================</span><br><span class="line">   BYTE UNIX Benchmarks (Version 5.1.3)</span><br><span class="line"></span><br><span class="line">   System: VM-8-9-ubuntu: GNU/Linux</span><br><span class="line">   OS: GNU/Linux -- 4.15.0-88-generic -- #88-Ubuntu SMP Tue Feb 11 20:11:34 UTC 2020</span><br><span class="line">   Machine: x86_64 (x86_64)</span><br><span class="line">   Language: en_US.utf8 (charmap="UTF-8", collate="UTF-8")</span><br><span class="line">   CPU 0: AMD EPYC 7K62 48-Core Processor (5190.2 bogomips)</span><br><span class="line">          x86-64, MMX, AMD MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET</span><br><span class="line">   22:01:26 up 5 min,  1 user,  load average: 0.11, 0.22, 0.11; runlevel 5</span><br><span class="line"></span><br><span class="line">------------------------------------------------------------------------</span><br><span class="line">Benchmark Run: Mon Jul 06 2020 22:01:26 - 22:31:06</span><br><span class="line">1 CPU in system; running 1 parallel copy of tests</span><br><span class="line"></span><br><span class="line">Dhrystone 2 using register variables       39868669.2 lps   (10.0 s, 7 samples)</span><br><span class="line">Double-Precision Whetstone                     3161.5 MWIPS (20.0 s, 7 samples)</span><br><span class="line">Execl Throughput                               5599.4 lps   (30.0 s, 2 samples)</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks       1199684.7 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 256 bufsize 500 maxblocks          323022.4 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks       3465015.1 KBps  (30.0 s, 2 samples)</span><br><span class="line">Pipe Throughput                             1942962.2 lps   (10.0 s, 7 samples)</span><br><span class="line">Pipe-based Context Switching                 294012.1 lps   (10.0 s, 7 samples)</span><br><span class="line">Process Creation                              20476.3 lps   (30.0 s, 2 samples)</span><br><span class="line">Shell Scripts (1 concurrent)                  11446.9 lpm   (60.0 s, 2 samples)</span><br><span class="line">Shell Scripts (8 concurrent)                   1507.0 lpm   (60.0 s, 2 samples)</span><br><span class="line">System Call Overhead                        2554990.5 lps   (10.0 s, 7 samples)</span><br><span class="line"></span><br><span class="line">System Benchmarks Index Values               BASELINE       RESULT    INDEX</span><br><span class="line">Dhrystone 2 using register variables         116700.0   39868669.2   3416.3</span><br><span class="line">Double-Precision Whetstone                       55.0       3161.5    574.8</span><br><span class="line">Execl Throughput                                 43.0       5599.4   1302.2</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks          3960.0    1199684.7   3029.5</span><br><span class="line">File Copy 256 bufsize 500 maxblocks            1655.0     323022.4   1951.8</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks          5800.0    3465015.1   5974.2</span><br><span class="line">Pipe Throughput                               12440.0    1942962.2   1561.9</span><br><span class="line">Pipe-based Context Switching                   4000.0     294012.1    735.0</span><br><span class="line">Process Creation                                126.0      20476.3   1625.1</span><br><span class="line">Shell Scripts (1 concurrent)                     42.4      11446.9   2699.7</span><br><span class="line">Shell Scripts (8 concurrent)                      6.0       1507.0   2511.6</span><br><span class="line">System Call Overhead                          15000.0    2554990.5   1703.3</span><br><span class="line">                                                                   ========</span><br><span class="line">System Benchmarks Index Score                                        1879.8</span><br></pre></td></tr></table></figure>
-
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>服务器性能：AMD的U，运算能力还是满强的的，磁盘IO也很棒</p>
-<p>网络情况：国内访问延迟较低，国外访问丢包。</p>
-<p><strong>价格情况：价格不算便宜，不过现在可以免费体验。</strong></p>
-<p>计费方式：按月/年计费。</p>
-<p>支付方式：微信，银行卡。</p>
-<p>能否建站： 可以，国外访问较差。</p>
-<p>工单服务：回复比较及时。</p>
-<p>商家口碑：口碑不错。</p>
-<p>能否退货：支持七天无理由退款。</p>
-<p>完。</p>
-]]></content>
-      <tags>
-        <tag>VPS</tag>
-        <tag>腾讯云</tag>
-        <tag>Lighthouse</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>阿里云香港服务器测评：1CPU/1GB内存/25GB硬盘/30Mbps/轻量应用服务器</title>
-    <url>/2020/06/28/%E9%98%BF%E9%87%8C%E4%BA%91%E8%BD%BB%E9%87%8F%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84/</url>
+    <title>阿里云香港服务器测评：1CPU/1GB内存/25GB硬盘/30Mbps/香港地区轻量应用服务器</title>
+    <url>/2020/06/28/%E9%98%BF%E9%87%8C%E4%BA%91%E9%A6%99%E6%B8%AF%E8%BD%BB%E9%87%8F%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84/</url>
     <content><![CDATA[<p>​    阿里云计算，<code>Alibaba Cloud</code>，是一家提供云端运算服务的科技公司，创立于2009年9月，为阿里巴巴集团全资所有。阿里云计算公司总部位于杭州，在北京和硅谷等地设有研发中心和运营机构，涉及云计算的产品与服务。至2018年上半年，公有云<code>IaaS</code>厂商全球市场份额阿里云排名第三，仅次于<code>AWS</code>和<code>Azure</code>。</p>
 <p>​    阿里云提供的轻量应用服务器，24元/月，CPU为1核，内存大小为<code>1GB</code>，SSD大小为<code>25GB</code>。峰值带宽限制在<code>30Mbps</code>，每月流量为<code>1TB</code>。最近都说阿里云线路变得越来越差了，小编也凑了个热闹，赶紧开了一台看看线路究竟如何。下面跟随小编来看一下如何创建轻量应用服务器吧~</p>
 <a id="more"></a>
@@ -357,134 +493,7 @@
       <tags>
         <tag>VPS</tag>
         <tag>阿里云</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>金山云服务器测评：1CPU/2G内存/5M带宽国内轻量应用云服务器</title>
-    <url>/2020/07/08/%E9%87%91%E5%B1%B1%E4%BA%91%E5%9B%BD%E5%86%85%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84/</url>
-    <content><![CDATA[<p>​    金山云创立于2012年，是中国前三的互联网云服务商，2020年5月在美国纳斯达克上市（股票代码：KC），业务范围遍及全球多个国家和地区。成立8年来，金山云始终坚持以客户为中心的服务理念，提供安全、可靠、稳定、高品质的云计算服务。</p>
-<a id="more"></a>
-
-<p>​    此次介绍的是<code>云服务器 基础型E1</code>。通过<strong>邀请新用户参团并购买</strong>老用户即可获得购买机会。</p>
-<p>参团链接：<a href="http://ksyun.com/s/cIyKG2" target="_blank" rel="noopener">http://ksyun.com/s/cIyKG2</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708191652276.png" alt="image-20200708191652276"></p>
-<h3 id="如何购买"><a href="#如何购买" class="headerlink" title="如何购买"></a>如何购买</h3><p>打开活动界面，点击注册账户。输入个人信息完成注册。微信扫码通过<strong>身份证号+人脸识别</strong>完成实名验证。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708192052498.png" alt=""></p>
-<p>实名验证后返回活动界面，点击拼团购买。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708192500858.png" alt=""></p>
-<h3 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h3><p><a href="https://kec.console.ksyun.com/v2/#/kec" target="_blank" rel="noopener">https://kec.console.ksyun.com/v2/#/kec</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708192800736.png" alt=""></p>
-<h3 id="主机配置"><a href="#主机配置" class="headerlink" title="主机配置"></a>主机配置</h3><p>通过运行<code>bash &lt;(curl -Lso- https://cdn.jsdelivr.net/gh/wf09/superbench/superbench.sh)</code>，查看基本的服务器信息。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708192947754.png" alt=""></p>
-<p>其他配置：</p>
-<p>带宽：5Mbps（峰值）</p>
-<p>流量：<strong>无限</strong></p>
-<p>数据中心：北京/广州/上海 </p>
-<p>价格：<em>88</em>一年（续费原价）</p>
-<p>支持的Linux镜像：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708193240582.png" alt=""></p>
-<p>支持的Windows镜像：<img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708193322805.png" alt=""></p>
-<p>可以通过重装系统来切换系统！</p>
-<h3 id="IO测试"><a href="#IO测试" class="headerlink" title="IO测试"></a>IO测试</h3><p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708193754329.png" alt=""></p>
-<p>IO速度<strong>非常快</strong>，就是不太稳定233。</p>
-<h3 id="网络测试"><a href="#网络测试" class="headerlink" title="网络测试"></a>网络测试</h3><p>使用<code>bash &lt;(curl -Lso- https://cdn.jsdelivr.net/gh/wf09/superspeed/superspeed.sh)</code>进行全面测速。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708195332125.png" alt="">国内一般说来线路都不错。</p>
-<p>下载速度测试：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708205032115.png" alt=""></p>
-<h3 id="网络丢包"><a href="#网络丢包" class="headerlink" title="网络丢包"></a>网络丢包</h3><p>测试时间晚上8点左右，国内表现较好。国外稍有丢包！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708195627952.png" alt=""></p>
-<h3 id="内存测试"><a href="#内存测试" class="headerlink" title="内存测试"></a>内存测试</h3><p>使用以下命令进行内存测试：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install wget build-essential -y</span><br><span class="line">wget https://cdn.jsdelivr.net/gh/FunctionClub/Memtester/memtester.cpp</span><br><span class="line">g++ -l stdc++ memtester.cpp</span><br><span class="line">./a.out</span><br></pre></td></tr></table></figure>
-
-<p>最大能分配到1820MB</p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200708195945433.png" alt=""></p>
-<h3 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h3><p>执行以下命令：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://ftp.fly97.cn/linux/UnixBench5.1.3.tgz</span><br><span class="line">tar -zxvf UnixBench5.1.3.tgz</span><br><span class="line">cd UnixBench</span><br><span class="line">make</span><br><span class="line">./Run</span><br></pre></td></tr></table></figure>
-
-<p>测试结果：  </p>
-<p>仅有606.4！！</p>
-<p>虽然官宣是<strong>Intel Xeon E5</strong>系列处理器。但是性能跑分非常不理想！</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">========================================================================</span><br><span class="line">   BYTE UNIX Benchmarks (Version 5.1.3)</span><br><span class="line"></span><br><span class="line">   System: vm10-0-1-93: GNU/Linux</span><br><span class="line">   OS: GNU/Linux -- 4.15.0-29-generic -- #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018</span><br><span class="line">   Machine: x86_64 (x86_64)</span><br><span class="line">   Language: en_US.utf8 (charmap="UTF-8", collate="UTF-8")</span><br><span class="line">   CPU 0: Ksyun Virtual CPU(ksyun-cpu64) (4988.4 bogomips)</span><br><span class="line">          x86-64, MMX, Physical Address Ext, SYSCALL/SYSRET</span><br><span class="line">   20:02:57 up  1:13,  1 user,  load average: 0.09, 0.09, 0.04; runlevel 5</span><br><span class="line"></span><br><span class="line">------------------------------------------------------------------------</span><br><span class="line">Benchmark Run: Wed Jul 08 2020 20:02:57 - 20:31:05</span><br><span class="line">1 CPU in system; running 1 parallel copy of tests</span><br><span class="line"></span><br><span class="line">Dhrystone 2 using register variables       29235641.6 lps   (10.0 s, 7 samples)</span><br><span class="line">Double-Precision Whetstone                     3832.9 MWIPS (9.9 s, 7 samples)</span><br><span class="line">Execl Throughput                               2769.2 lps   (30.0 s, 2 samples)</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks        228633.4 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 256 bufsize 500 maxblocks           58856.3 KBps  (30.0 s, 2 samples)</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks        814329.1 KBps  (30.0 s, 2 samples)</span><br><span class="line">Pipe Throughput                              293850.7 lps   (10.0 s, 7 samples)</span><br><span class="line">Pipe-based Context Switching                  74232.1 lps   (10.0 s, 7 samples)</span><br><span class="line">Process Creation                               7529.0 lps   (30.0 s, 2 samples)</span><br><span class="line">Shell Scripts (1 concurrent)                   5896.6 lpm   (60.0 s, 2 samples)</span><br><span class="line">Shell Scripts (8 concurrent)                    765.1 lpm   (60.1 s, 2 samples)</span><br><span class="line">System Call Overhead                         246375.1 lps   (10.0 s, 7 samples)</span><br><span class="line"></span><br><span class="line">System Benchmarks Index Values               BASELINE       RESULT    INDEX</span><br><span class="line">Dhrystone 2 using register variables         116700.0   29235641.6   2505.2</span><br><span class="line">Double-Precision Whetstone                       55.0       3832.9    696.9</span><br><span class="line">Execl Throughput                                 43.0       2769.2    644.0</span><br><span class="line">File Copy 1024 bufsize 2000 maxblocks          3960.0     228633.4    577.4</span><br><span class="line">File Copy 256 bufsize 500 maxblocks            1655.0      58856.3    355.6</span><br><span class="line">File Copy 4096 bufsize 8000 maxblocks          5800.0     814329.1   1404.0</span><br><span class="line">Pipe Throughput                               12440.0     293850.7    236.2</span><br><span class="line">Pipe-based Context Switching                   4000.0      74232.1    185.6</span><br><span class="line">Process Creation                                126.0       7529.0    597.5</span><br><span class="line">Shell Scripts (1 concurrent)                     42.4       5896.6   1390.7</span><br><span class="line">Shell Scripts (8 concurrent)                      6.0        765.1   1275.2</span><br><span class="line">System Call Overhead                          15000.0     246375.1    164.3</span><br><span class="line">                                                                   ========</span><br><span class="line">System Benchmarks Index Score                                         606.4</span><br></pre></td></tr></table></figure>
-
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>服务器性能：相当滴辣鸡。</p>
-<p>网络情况：国内访问不错，毕竟是BGP线路，国外访问丢包。</p>
-<p><strong>价格情况：参加活动比较便宜，原价比较贵。</strong></p>
-<p>支付方式：微信，银行卡。</p>
-<p>能否建站： 可以，国外访问较差。</p>
-<p>工单服务：支持在线客服，工单回复也比较及时。</p>
-<p>商家口碑：口碑不错。</p>
-<p>能否退货：<strong>特价机型非特殊原因不退。</strong></p>
-<p>完。</p>
-]]></content>
-      <tags>
-        <tag>VPS</tag>
-        <tag>金山云</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>v2ray快速上手全记录</title>
-    <url>/2020/04/23/v2ray%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E5%85%A8%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>快速上手v2ray</p>
-<a id="more"></a>
-
-<h5 id="1-下载并运行脚本"><a href="#1-下载并运行脚本" class="headerlink" title="1.下载并运行脚本"></a>1.下载并运行脚本</h5><p>需要先安装curl：<code>apt-get install curl</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -L -s https://install.direct/go.sh)</span><br></pre></td></tr></table></figure>
-
-<p>安装完毕后使用以下命令启动</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl start v2ray</span><br></pre></td></tr></table></figure>
-
-<p>以服务方式启动，开机自启动</p>
-<h5 id="2-caddy-websockset"><a href="#2-caddy-websockset" class="headerlink" title="2.caddy+websockset"></a>2.caddy+websockset</h5><h6 id="2-1服务端"><a href="#2-1服务端" class="headerlink" title="2.1服务端"></a>2.1服务端</h6><p>安装caddy：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://git.io/vra5C -O - -o /dev/null|bash</span><br></pre></td></tr></table></figure>
-
-<p><strong>注意：</strong>安装证书时需要查看端口是否占用</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">lsof -i:443</span><br></pre></td></tr></table></figure>
-
-<p>编辑v2ray配置文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/v2ray/config.json</span><br></pre></td></tr></table></figure>
-
-<p>最简单的配置文件：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="attr">"log"</span>: &#123;</span><br><span class="line">    <span class="attr">"loglevel"</span>: <span class="string">"warning"</span>,</span><br><span class="line">    <span class="attr">"access"</span>: <span class="string">"/var/log/v2ray/access.log"</span>,</span><br><span class="line">    <span class="attr">"error"</span>: <span class="string">"/var/log/v2ray/error.log"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"inbounds"</span>: [</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">"port"</span>: <span class="number">10000</span>,  <span class="comment">//端口号</span></span><br><span class="line">    <span class="attr">"listen"</span>:<span class="string">"127.0.0.1"</span>,  <span class="comment">//默认只监听内网ip</span></span><br><span class="line">    <span class="attr">"protocol"</span>: <span class="string">"vmess"</span>,  <span class="comment">//加密协议</span></span><br><span class="line">    <span class="attr">"settings"</span>: &#123;</span><br><span class="line">      <span class="attr">"clients"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"id"</span>: <span class="string">"c4ef8fef-91b9-4f84-8b81-8aae98f3b7f9"</span>,    <span class="comment">//uuid</span></span><br><span class="line">          <span class="attr">"alterId"</span>: <span class="number">32</span> <span class="comment">//附加id</span></span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;,</span><br><span class="line">   <span class="attr">"streamSettings"</span>: &#123;</span><br><span class="line">        <span class="attr">"network"</span>:<span class="string">"ws"</span>,  <span class="comment">//传输方式</span></span><br><span class="line">        <span class="attr">"wsSettings"</span>: &#123;</span><br><span class="line">        <span class="attr">"path"</span>: <span class="string">"/app"</span>  <span class="comment">//分流路径</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"> &#125;</span><br><span class="line">],</span><br><span class="line">  <span class="attr">"outbounds"</span>: [</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">"protocol"</span>: <span class="string">"freedom"</span>,</span><br><span class="line">    <span class="attr">"settings"</span>: &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>配置文件下载：<code>https://ftp.fly97.cn/configuration/config.json</code></p>
-<p>编辑caddy配置文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">caddy edit</span><br></pre></td></tr></table></figure>
-
-<p>最简单的caddy配置文件：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">http://yoursite &#123;</span></span><br><span class="line">        root /var/caddywww/</span><br><span class="line">        gzip</span><br><span class="line">        tls off</span><br><span class="line">        log /var/log/caddy/access.log</span><br><span class="line">        errors /var/log/caddy/error.log</span><br><span class="line">        proxy /app localhost:10000 &#123;</span><br><span class="line">        websocket</span><br><span class="line">        header_upstream -Origin</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>配置文件下载：<code>https://ftp.fly97.cn/configuration/Caddyfile</code></p>
-<h6 id="2-2客户端"><a href="#2-2客户端" class="headerlink" title="2.2客户端"></a>2.2客户端</h6><p>建议使用clash，支持win和安卓平台</p>
-<p>win平台：</p>
-<p><a href="https://github.com/Fndroid/clash_for_windows_pkg/releases" target="_blank" rel="noopener">https://github.com/Fndroid/clash_for_windows_pkg/releases</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/wf09/upload/image-20200423211355498.png" alt="image-20200423211355498"></p>
-<p>其中配置文件需要自己编写，支持快速分流。</p>
-<p>重点介绍以下v2ray部分的配置文件。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Will be ignored after profile selection</span><br><span class="line">Proxy:</span><br><span class="line">  - name: gost</span><br><span class="line">    type: socks5</span><br><span class="line">    server: 127.0.0.1</span><br><span class="line">    port: 1080</span><br><span class="line">  - name: v2ray</span><br><span class="line">    type: vmess</span><br><span class="line">    server: yoursite</span><br><span class="line">    uuid: &quot;c4ef8fef-91b9-4f84-8b81-8aae98f3b7f9&quot;</span><br><span class="line">    port: 80</span><br><span class="line">    cipher: &quot;auto&quot;</span><br><span class="line">    udp: false</span><br><span class="line">    network: ws</span><br><span class="line">    ws-path: &quot;&#x2F;app&quot;</span><br><span class="line">    tls: false</span><br><span class="line">    alterId: 32</span><br><span class="line">Proxy Group:</span><br><span class="line">  - name: Proxy</span><br><span class="line">    type: select</span><br><span class="line">    proxies:</span><br><span class="line">      - gost</span><br><span class="line">      - v2ray</span><br><span class="line">Rule:</span><br><span class="line">- DOMAIN-SUFFIX,aliyun,Proxy</span><br><span class="line">- DOMAIN,fly97.cn,Proxy</span><br><span class="line">- DOMAIN-SUFFIX,alibabacloud,Proxy</span><br><span class="line">- DOMAIN-SUFFIX,cn,DIRECT</span><br><span class="line"></span><br><span class="line"># ad tracks</span><br><span class="line">- DOMAIN,graph.instagram.com,DIRECT</span><br><span class="line">- DOMAIN,www.googleadservices.com,DIRECT</span><br><span class="line">- DOMAIN,control.kochava.com,DIRECT</span><br><span class="line">- DOMAIN,www.google-analytics.com,DIRECT</span><br><span class="line">- DOMAIN,ssl.google-analytics.com,DIRECT</span><br><span class="line">- DOMAIN,nexus.officeapps.live.com,DIRECT</span><br><span class="line">- DOMAIN,googleads.g.doubleclick.net,DIRECT</span><br><span class="line">- DOMAIN,e.crashlytics.com,DIRECT</span><br><span class="line">- DOMAIN,ib.adnxs.com,DIRECT</span><br><span class="line">- DOMAIN-SUFFIX,googlesyndication.com,DIRECT</span><br><span class="line">- DOMAIN-SUFFIX,googletagmanager.com,DIRECT</span><br><span class="line">- DOMAIN-SUFFIX,googletagservices.com,DIRECT</span><br><span class="line">- DOMAIN,safebrowsing.googleapis.com,DIRECT</span><br><span class="line"></span><br><span class="line">- DOMAIN,google.com,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,paypal,DIRECT</span><br><span class="line">- DOMAIN-SUFFIX,google.com,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,facebook,Proxy</span><br><span class="line">- DOMAIN-SUFFIX,fb.me,Proxy</span><br><span class="line">- DOMAIN-SUFFIX,fbcdn.net,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,gmail,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,twitter,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,instagram,Proxy</span><br><span class="line">- DOMAIN-SUFFIX,twimg.com,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,blogspot,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,whatsapp,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,scholar,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,glados,Proxy</span><br><span class="line">- DOMAIN-KEYWORD,mailgun,Proxy</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- DOMAIN-KEYWORD,weibo,DIRECT</span><br><span class="line">- DOMAIN-KEYWORD,hostloc,DIRECT</span><br></pre></td></tr></table></figure>
-
-<h5 id="3-caddy-websocket-tls"><a href="#3-caddy-websocket-tls" class="headerlink" title="3.caddy+websocket+tls"></a>3.caddy+websocket+tls</h5><p>首先第二步中服务器端口换成443</p>
-<p>其次更改caddy配置文件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;yoursite &#123;</span><br><span class="line">        root &#x2F;var&#x2F;caddywww&#x2F;</span><br><span class="line">        gzip</span><br><span class="line">        tls yoursite@mail</span><br><span class="line">        log &#x2F;var&#x2F;log&#x2F;caddy&#x2F;access.log</span><br><span class="line">        errors &#x2F;var&#x2F;log&#x2F;caddy&#x2F;error.log</span><br><span class="line">        proxy &#x2F;app localhost:10000 &#123;</span><br><span class="line">        websocket</span><br><span class="line">        header_upstream -Origin</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="4-caddy-tls-web"><a href="#4-caddy-tls-web" class="headerlink" title="4.caddy+tls+web"></a>4.caddy+tls+web</h5><p>优点：减少tls握手时间</p>
-<h6 id="安装tls分流器"><a href="#安装tls分流器" class="headerlink" title="安装tls分流器"></a>安装tls分流器</h6><p>对于 linux-amd64 可以使用脚本安装，以 root 身份执行以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash &lt;(curl -L -s https://raw.githubusercontent.com/liberal-boy/tls-shunt-proxy/master/dist/install.sh)</span><br></pre></td></tr></table></figure>
-
-<p>配置文件位于：<code>/etc/tls-shunt-proxy/config.yaml</code></p>
-<p>项目地址：<a href="https://github.com/liberal-boy/tls-shunt-proxy" target="_blank" rel="noopener">https://github.com/liberal-boy/tls-shunt-proxy</a></p>
-<h6 id="修改分流器配置文件"><a href="#修改分流器配置文件" class="headerlink" title="修改分流器配置文件"></a>修改分流器配置文件</h6><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">listen:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span><span class="string">:443</span></span><br><span class="line"><span class="attr">vhosts:</span></span><br><span class="line">    <span class="comment"># 将 example.com 改为你的域名</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">example.com</span></span><br><span class="line">    <span class="attr">tlsoffloading:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">managedcert:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">alpn:</span> <span class="string">h2,http/1.1</span></span><br><span class="line">    <span class="comment"># 如果不需要兼容 tls12, 可改为 tls13</span></span><br><span class="line">    <span class="attr">protocols:</span> <span class="string">tls12,tls13</span></span><br><span class="line">    <span class="attr">http:</span></span><br><span class="line">      <span class="attr">handler:</span> <span class="string">fileServer</span></span><br><span class="line">      <span class="comment"># /var/www/html 是静态网站目录</span></span><br><span class="line">      <span class="attr">args:</span> <span class="string">/var/www/html</span></span><br><span class="line">    <span class="attr">default:</span></span><br><span class="line">      <span class="attr">handler:</span> <span class="string">proxyPass</span></span><br><span class="line">      <span class="attr">args:</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">:40001</span></span><br></pre></td></tr></table></figure>
-
-<h6 id="修改v2ray配置文件"><a href="#修改v2ray配置文件" class="headerlink" title="修改v2ray配置文件"></a>修改v2ray配置文件</h6><p>编辑文件：<code>vim /etc/v2ray/config.json</code></p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"inbounds"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"protocol"</span>: <span class="string">"vmess"</span>,</span><br><span class="line">            <span class="attr">"listen"</span>: <span class="string">"127.0.0.1"</span>,</span><br><span class="line">            <span class="attr">"port"</span>: <span class="number">40001</span>,</span><br><span class="line">            <span class="attr">"settings"</span>: &#123;</span><br><span class="line">                <span class="attr">"clients"</span>: [</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="attr">"id"</span>: <span class="string">"f2435e5c-9ad9-4367-836a-8341117d0a5f"</span></span><br><span class="line">                    &#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">"streamSettings"</span>: &#123;</span><br><span class="line">                <span class="attr">"network"</span>: <span class="string">"tcp"</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"outbounds"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"protocol"</span>: <span class="string">"freedom"</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h6 id="重启服务"><a href="#重启服务" class="headerlink" title="重启服务"></a>重启服务</h6><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl restart tls-shunt-proxy</span><br><span class="line">systemctl restart v2ray</span><br></pre></td></tr></table></figure>
-
-<h6 id="客户端连接"><a href="#客户端连接" class="headerlink" title="客户端连接"></a>客户端连接</h6><p>客户端连接<code>example.com:443 vmess tls</code>即可</p>
-<p>转载自：</p>
-<p><a href="https://guide.v2fly.org/advanced/tcp_tls_shunt_proxy.html#实现" target="_blank" rel="noopener">https://guide.v2fly.org/advanced/tcp_tls_shunt_proxy.html#%E5%AE%9E%E7%8E%B0</a></p>
-]]></content>
-      <tags>
-        <tag>v2ray</tag>
+        <tag>香港</tag>
       </tags>
   </entry>
 </search>
